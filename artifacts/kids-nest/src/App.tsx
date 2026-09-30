@@ -18,10 +18,10 @@ import NotFound from '@/pages/not-found';
 const queryClient = new QueryClient();
 
 const programs = [
-  { title: 'Play Group', age: '1.5–2.5 years', description: 'A joyful first step into structured learning, friendship and exploration.', color: 'bg-[#dff3ec]', icon: Leaf },
-  { title: 'Nursery', age: '2.5–3.5 years', description: 'Building confidence, communication and early learning skills through play.', color: 'bg-[#fff1bd]', icon: Sun },
-  { title: 'LKG', age: '3.5–4.5 years', description: 'Developing foundational academic and social skills through engaging activities.', color: 'bg-[#ffe0d6]', icon: Sparkles },
-  { title: 'UKG', age: '4.5–5.5 years', description: 'Preparing young learners for their next big adventure with confidence and curiosity.', color: 'bg-[#e9e1f8]', icon: Compass },
+  { title: 'Play Group', age: '1.5–2.5 years', description: 'A joyful first step into a world of play, friendship and exploration — building social skills and confidence through warm, guided interaction.', color: 'bg-[#dff3ec]', icon: Leaf },
+  { title: 'Nursery', age: '2.5–3.5 years', description: 'Encouraging communication, creativity, and early learning through play-based activities that nurture every child\'s natural curiosity.', color: 'bg-[#fff1bd]', icon: Sun },
+  { title: 'LKG', age: '3.5–4.5 years', description: 'Building foundational literacy, numeracy, and social skills through engaging hands-on activities, stories, music, and creative arts.', color: 'bg-[#ffe0d6]', icon: Sparkles },
+  { title: 'UKG', age: '4.5–5.5 years', description: 'Preparing confident, curious, and capable young learners for their next big step — with strong values, independence, and a love for learning.', color: 'bg-[#e9e1f8]', icon: Compass },
 ];
 
 const teachers = [
@@ -106,7 +106,7 @@ function Hero({ onEnquire }: { onEnquire: () => void }) {
         <div className="relative z-10 reveal is-visible">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#afd9d7] bg-[#f5fffb]/80 px-3 py-2 text-[.68rem] font-bold uppercase tracking-[.15em] text-[#277784]"><Sparkles className="size-3.5" /> Coimbatore’s little learning world</div>
           <h1 className="max-w-[620px] font-display text-[clamp(3.6rem,7.2vw,6.8rem)] leading-[.91] tracking-[-.065em] text-[#203047]">Where little minds <em className="relative inline-block not-italic text-[#ef775f]">grow,</em> explore & <span className="relative whitespace-nowrap text-[#1e9cb1]">shine<span className="absolute -right-7 -top-5 text-2xl font-bold text-[#f3c94f]">+</span></span></h1>
-          <p className="mt-7 max-w-[530px] text-[1.03rem] leading-8 text-[#527285]">Welcome to Kids Nest — a joyful learning space in Coimbatore where curiosity is encouraged, creativity is celebrated, and every little learner gets the care they deserve.</p>
+          <p className="mt-7 max-w-[530px] text-[1.03rem] leading-8 text-[#527285]">Welcome to Kidsnest — a warm, safe, and engaging learning space in Coimbatore for children aged 12 months and above, where curiosity is encouraged, creativity is celebrated, and every little learner gets the individual care they deserve.</p>
           <div className="mt-9 flex flex-wrap gap-3">
             <button onClick={() => scrollToId('story')} className="inline-flex items-center rounded-full bg-[#203047] px-6 py-4 text-sm font-bold text-white shadow-[0_10px_24px_rgba(32,48,71,.18)] transition-all hover:-translate-y-1 hover:bg-[#304a63]" data-testid="button-explore">Explore Kids Nest <ArrowDown className="ml-2.5 size-4" /></button>
             <button onClick={onEnquire} className="inline-flex items-center rounded-full border-2 border-[#203047]/15 bg-[#fffaf1]/70 px-6 py-4 text-sm font-bold text-[#203047] transition-all hover:-translate-y-1 hover:border-[#1e9cb1] hover:text-[#1e9cb1]" data-testid="button-hero-visit">Book a school visit <ArrowUpRight className="ml-2.5 size-4" /></button>
@@ -153,7 +153,7 @@ function SectionHeading({ eyebrow, title, text, centered = false }: { eyebrow: s
 }
 
 function StorySection() {
-  const stats = [['editable', 'Happy little learners'], ['editable', 'Expert educators'], ['editable', 'Fun learning activities'], ['editable', 'Years of nurturing childhoods']];
+  const stats = [['12+', 'Months & above welcome'], ['Small', 'Class sizes for individual care'], ['Holistic', 'Child development focus'], ['10+', 'Years of nurturing childhoods']];
   return <section id="story" className="section-pad bg-[#fffaf1]">
     <div className="container-wide grid items-center gap-16 lg:grid-cols-[.86fr_1.14fr]">
       <div className="relative min-h-[450px] reveal">
@@ -166,7 +166,17 @@ function StorySection() {
         <div className="absolute bottom-[9%] left-[8%] rounded-full border-2 border-dashed border-[#62ae9c] px-4 py-2 text-xs font-bold text-[#438b7d]">play • explore • grow</div>
       </div>
       <div>
-        <SectionHeading eyebrow="Welcome to Kids Nest" title="A little nest for big dreams" text="Kids Nest provides a nurturing environment where children learn through play, exploration, creativity, stories, music, movement, social interaction and hands-on activities. We make space for the whole child — curious, capable and wonderfully themselves." />
+        <SectionHeading eyebrow="Welcome to Kidsnest" title="A little nest for big dreams" text="Kidsnest was founded with a simple yet meaningful vision — to support working mothers and fathers by creating a warm, safe, and engaging environment for children aged 12 months and above. Today, we are a unique child-centric learning space that focuses on holistic growth, joyful learning, and individual care." />
+        <div className="mt-8 grid gap-5">
+          <div className="rounded-2xl border border-[#e5ded0] bg-white/70 p-5">
+            <span className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[.12em] text-[#1e9cb1]"><Lightbulb className="size-4" /> Our Vision</span>
+            <p className="text-sm leading-7 text-[#527285]">To develop confident, compassionate, and independent young learners by providing a nurturing and stimulating environment that serves as a strong foundation for every child to blossom at their own pace — fostering curiosity, creativity, self-expression, and a lifelong love for learning.</p>
+          </div>
+          <div className="rounded-2xl border border-[#e5ded0] bg-white/70 p-5">
+            <span className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[.12em] text-[#ef775f]"><Target className="size-4" /> Our Mission</span>
+            <p className="text-sm leading-7 text-[#527285]">To create a joyful, safe, and nurturing environment where every child feels valued, confident, and inspired to learn — growing intellectually, emotionally, socially, and creatively through meaningful play-based learning, innovative activities, and caring guidance.</p>
+          </div>
+        </div>
         <div className="mt-9 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {stats.map(([number, label], index) => <div key={label} className={`rounded-2xl border border-[#e5ded0] bg-white/65 p-4 reveal delay-${index % 3 + 1}`} data-testid={`stat-card-${index}`}><strong className="block font-display text-[1.55rem] leading-none text-[#1e9cb1]">{number}</strong><span className="mt-2 block text-[.68rem] font-bold leading-4 text-[#617686]">{label}</span></div>)}
         </div>
@@ -175,10 +185,81 @@ function StorySection() {
   </section>;
 }
 
+function FounderSection() {
+  return (
+    <section id="founder" className="section-pad bg-[#fff8ee]">
+      <div className="container-wide">
+        <div className="grid items-center gap-14 lg:grid-cols-[1fr_1.1fr]">
+          {/* Founder illustration card */}
+          <div className="relative mx-auto w-full max-w-[420px] reveal">
+            <div className="absolute -left-4 -top-4 size-48 rounded-full bg-[#f3c94f]/20 blur-2xl" />
+            <div className="absolute -bottom-4 -right-4 size-48 rounded-full bg-[#1e9cb1]/15 blur-2xl" />
+            <div className="relative overflow-hidden rounded-[36px] border-4 border-white bg-[#dff3ec] shadow-[0_24px_60px_rgba(32,48,71,.14)]">
+              {/* Illustrated founder avatar */}
+              <div className="flex h-72 items-end justify-center bg-gradient-to-b from-[#dff3ec] to-[#b8e6d4]">
+                <div className="relative h-60 w-48">
+                  {/* Body */}
+                  <div className="absolute bottom-0 left-1/2 h-40 w-36 -translate-x-1/2 rounded-t-[60px] bg-[#1e9cb1]" />
+                  {/* Head */}
+                  <div className="absolute left-1/2 top-4 size-28 -translate-x-1/2 rounded-full bg-[#c98c6d]" />
+                  {/* Hair */}
+                  <div className="absolute left-1/2 top-3 h-16 w-28 -translate-x-1/2 rounded-t-full bg-[#2d1a0e]" />
+                  {/* Eyes */}
+                  <div className="absolute left-[calc(50%-18px)] top-[52px] size-3 rounded-full bg-[#203047]" />
+                  <div className="absolute left-[calc(50%+6px)] top-[52px] size-3 rounded-full bg-[#203047]" />
+                  {/* Smile */}
+                  <div className="absolute left-1/2 top-[70px] h-2 w-10 -translate-x-1/2 rounded-full bg-[#ef775f]" />
+                  {/* Arms */}
+                  <div className="absolute bottom-20 left-[-8px] h-8 w-12 rotate-[20deg] rounded-full bg-[#1e9cb1]" />
+                  <div className="absolute bottom-20 right-[-8px] h-8 w-12 rotate-[-20deg] rounded-full bg-[#1e9cb1]" />
+                  {/* Saree accent */}
+                  <div className="absolute bottom-0 left-1/2 h-10 w-36 -translate-x-1/2 rounded-t-[20px] bg-[#ef775f]/40" />
+                </div>
+              </div>
+              <div className="bg-white p-6 text-center">
+                <h3 className="font-display text-2xl text-[#203047]">Mrs. Retna Devi</h3>
+                <p className="mt-1 text-sm font-bold text-[#1e9cb1]">Founder, Kidsnest School</p>
+                <p className="mt-3 text-xs italic leading-6 text-[#617686]">"Every child deserves a warm, safe space to grow, explore and discover the joy of learning."</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Founder story */}
+          <div className="reveal delay-1">
+            <span className="eyebrow">Our founder</span>
+            <h2 className="mt-4 font-display text-[clamp(2.5rem,5vw,4.2rem)] leading-[.96] tracking-[-.055em] text-[#203047]">
+              A vision born from <span className="text-[#ef775f]">purpose</span> & <span className="text-[#1e9cb1]">heart</span>
+            </h2>
+            <p className="mt-6 leading-7 text-[#527285]">
+              Kidsnest School was founded by <strong className="text-[#203047]">Mrs. Retna Devi</strong> with a simple yet meaningful vision — to support working mothers and fathers by creating a warm, safe, and engaging environment for children aged 12 months and above.
+            </p>
+            <p className="mt-4 leading-7 text-[#527285]">
+              What started as a nurturing space for young children has today evolved into a unique, child-centric learning model that focuses on holistic growth, joyful learning, and individual care.
+            </p>
+            <p className="mt-4 leading-7 text-[#527285]">
+              Driven by passion, dedication, and a deep understanding of early childhood development, Mrs. Retna Devi envisioned a place where children could learn, explore, and thrive with confidence in a loving and stimulating atmosphere.
+            </p>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-2xl border border-[#e5ded0] bg-white/80 p-4">
+                <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-[.1em] text-[#1e9cb1]"><Heart className="size-3.5 fill-current" /> Founded with love</span>
+                <p className="mt-2 text-sm leading-6 text-[#617686]">Started to support working parents by giving their children a safe, stimulating home away from home.</p>
+              </div>
+              <div className="rounded-2xl border border-[#e5ded0] bg-white/80 p-4">
+                <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-[.1em] text-[#ef775f]"><TreePine className="size-3.5" /> Growing every day</span>
+                <p className="mt-2 text-sm leading-6 text-[#617686]">Today Kidsnest continues to uphold that founding vision — fostering curiosity, creativity, values, and lifelong learning.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ProgramsSection() {
   return <section id="programs" className="section-pad bg-[#edf6f3]">
     <div className="container-wide">
-      <div className="flex flex-wrap items-end justify-between gap-7"><SectionHeading eyebrow="The early years" title="A place for every first step" text="Thoughtfully paced programs that meet children where they are, and give them room to become." /><span className="mb-2 hidden rounded-full border border-[#c7ded7] bg-white/60 px-4 py-2 text-xs font-bold text-[#527285] md:inline-flex"><span className="mr-2 size-2 rounded-full bg-[#ef775f]" />Admissions open for the coming term</span></div>
+      <div className="flex flex-wrap items-end justify-between gap-7"><SectionHeading eyebrow="The early years" title="A program for every first step" text="Thoughtfully paced programs designed around each stage of development — blending play, movement, creativity, early literacy, and gentle academic foundations." /><span className="mb-2 hidden rounded-full border border-[#c7ded7] bg-white/60 px-4 py-2 text-xs font-bold text-[#527285] md:inline-flex"><span className="mr-2 size-2 rounded-full bg-[#ef775f]" />Admissions open for the coming term</span></div>
       <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {programs.map(({ title, age, description, color, icon: Icon }, index) => <article key={title} className={`group relative overflow-hidden rounded-[28px] ${color} p-6 transition-transform duration-300 hover:-translate-y-2`} data-testid={`program-card-${index}`}>
           <div className="mb-14 flex items-start justify-between"><span className="grid size-12 place-items-center rounded-2xl bg-white/70 text-[#203047]"><Icon className="size-6" /></span><span className="rounded-full bg-white/65 px-3 py-1 text-[.63rem] font-bold text-[#527285]">{age}</span></div>
@@ -217,8 +298,71 @@ function ApproachSection() {
 }
 
 function WhySection() {
-  const features = [[Heart, 'Loving & caring environment'], [ShieldCheck, 'Child-friendly & safe campus'], [Users, 'Experienced educators'], [Palette, 'Activity-based learning'], [Leaf, 'Holistic child development'], [Accessibility, 'Individual attention'], [Music2, 'Creative & fun activities'], [MessageCircle, 'Strong parent-teacher communication']];
-  return <section className="section-pad bg-[#fffaf1]"><div className="container-wide"><div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]"><SectionHeading eyebrow="The Kids Nest difference" title="Why parents choose Kids Nest" text="A considered beginning matters. We bring warmth, intention and a whole lot of joy to every part of the day." /><div className="grid grid-cols-1 gap-3 sm:grid-cols-2">{features.map(([Icon, label], index) => { const FeatureIcon = Icon as typeof Heart; return <div key={label as string} className="group flex items-center gap-4 rounded-2xl border border-[#e5ded0] bg-[#fffdf8] p-4 transition-all hover:-translate-y-1 hover:border-[#abd6ce] hover:shadow-[var(--shadow-card)]" data-testid={`feature-${index}`}><span className="grid size-11 shrink-0 place-items-center rounded-xl bg-[#e8f4ef] text-[#2b9e99] transition-colors group-hover:bg-[#f3c94f] group-hover:text-[#203047]"><FeatureIcon className="size-5" /></span><span className="text-sm font-bold text-[#334b5a]">{label as string}</span></div>; })}</div></div></div></section>;
+  const pillars = [
+    {
+      icon: Users,
+      title: 'Small Class Sizes',
+      description: 'We maintain small class sizes to ensure every child receives individual attention, care, and guidance throughout their learning journey.',
+      color: 'bg-[#dff3ec]',
+      iconColor: 'text-[#2b9e99]',
+    },
+    {
+      icon: Heart,
+      title: 'Low Child-to-Teacher Ratio',
+      description: 'Our low child-to-teacher ratio helps us understand each child\'s unique learning style and support their emotional, social, and academic growth effectively.',
+      color: 'bg-[#fff1bd]',
+      iconColor: 'text-[#bc8d14]',
+    },
+    {
+      icon: Sparkles,
+      title: 'Beyond the Classroom',
+      description: 'Learning at Kidsnest goes beyond textbooks. Through hands-on activities, celebrations, creative arts, music, movement, storytelling, and experiential learning, children explore the world with joy.',
+      color: 'bg-[#ffe0d6]',
+      iconColor: 'text-[#d4634e]',
+    },
+    {
+      icon: Lightbulb,
+      title: 'Dynamic & Passionate Staff',
+      description: 'Our dedicated educators are passionate about early childhood learning and committed to creating a positive, inspiring atmosphere where every child feels safe, valued, and encouraged to shine.',
+      color: 'bg-[#e9e1f8]',
+      iconColor: 'text-[#8064a9]',
+    },
+  ];
+  const features = [[ShieldCheck, 'Child-friendly & safe campus'], [Palette, 'Activity-based learning'], [Leaf, 'Holistic child development'], [Accessibility, 'Individual attention'], [Music2, 'Creative & fun activities'], [MessageCircle, 'Strong parent-teacher communication']];
+  return (
+    <section className="section-pad bg-[#fffaf1]">
+      <div className="container-wide">
+        <SectionHeading eyebrow="The Kidsnest difference" title="Why parents choose Kidsnest" text="A considered beginning matters. We bring warmth, intention and a whole lot of joy to every part of the day." />
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          {pillars.map((pillar, index) => {
+            const PillarIcon = pillar.icon;
+            return (
+              <div key={pillar.title} className={`group rounded-[24px] ${pillar.color} p-6 transition-all hover:-translate-y-2`} data-testid={`pillar-${index}`}>
+                <span className={`grid size-12 place-items-center rounded-2xl bg-white/70 ${pillar.iconColor}`}>
+                  <PillarIcon className="size-6" />
+                </span>
+                <h3 className="mt-5 font-display text-xl text-[#203047]">{pillar.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-[#527285]">{pillar.description}</p>
+              </div>
+            );
+          })}
+        </div>
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          {features.map(([Icon, label], index) => {
+            const FeatureIcon = Icon as typeof Heart;
+            return (
+              <div key={label as string} className="group flex items-center gap-3 rounded-2xl border border-[#e5ded0] bg-[#fffdf8] p-4 transition-all hover:-translate-y-1 hover:border-[#abd6ce] hover:shadow-[var(--shadow-card)]" data-testid={`feature-${index}`}>
+                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-[#e8f4ef] text-[#2b9e99] transition-colors group-hover:bg-[#f3c94f] group-hover:text-[#203047]">
+                  <FeatureIcon className="size-4" />
+                </span>
+                <span className="text-xs font-bold text-[#334b5a]">{label as string}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 function GallerySection({ onOpen }: { onOpen: (index: number) => void }) {
@@ -265,15 +409,15 @@ function AdmissionsCTA({ onEnquire }: { onEnquire: () => void }) {
 
 function ContactSection() {
   const [sent, setSent] = useState(false);
-  return <section id="contact" className="section-pad bg-[#fffaf1]"><div className="container-wide grid gap-12 lg:grid-cols-[.72fr_1.28fr]"><div><SectionHeading eyebrow="Let’s talk about your little one" title="Come say hello" text="We’re here to answer your questions, share our story and help you find the right beginning for your family." /><div className="mt-9 grid gap-4 text-sm"><div className="flex gap-3"><span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#dff3ec] text-[#2b9e99]"><MapPin className="size-4" /></span><div><strong className="block text-[#203047]">Kids Nest</strong><span className="text-[#617686]">Coimbatore, Tamil Nadu</span></div></div><div className="flex gap-3"><span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#fff1bd] text-[#bc8d14]"><Phone className="size-4" /></span><div><strong className="block text-[#203047]">Phone</strong><span className="text-[#617686]">+91 [school phone]</span></div></div><div className="flex gap-3"><span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#ffe0d6] text-[#d4634e]"><Mail className="size-4" /></span><div><strong className="block text-[#203047]">Email</strong><span className="text-[#617686]">[school email]</span></div></div><div className="flex gap-3"><span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#e9e1f8] text-[#8064a9]"><Clock3 className="size-4" /></span><div><strong className="block text-[#203047]">School hours</strong><span className="text-[#617686]">[editable school timings]</span></div></div></div><div className="mt-8 flex h-36 items-center justify-center rounded-[22px] border border-dashed border-[#b9cbc4] bg-[#edf6f3] text-center"><div><MapPin className="mx-auto size-6 text-[#1e9cb1]" /><p className="mt-2 text-xs font-bold text-[#527285]">Google Maps embed placeholder</p><span className="text-[.65rem] text-[#78909a]">Replace with campus location</span></div></div></div>
+  return <section id="contact" className="section-pad bg-[#fffaf1]"><div className="container-wide grid gap-12 lg:grid-cols-[.72fr_1.28fr]"><div><SectionHeading eyebrow="Let’s talk about your little one" title="Come say hello" text="We’re here to answer your questions, share our story and help you find the right beginning for your family." /><div className="mt-9 grid gap-4 text-sm"><div className="flex gap-3"><span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#dff3ec] text-[#2b9e99]"><MapPin className="size-4" /></span><div><strong className="block text-[#203047]">Kidsnest</strong><span className="text-[#617686]">57, Indira Nagar, Sungam Bye-Pass Road,<br />Coimbatore - 641045</span></div></div><div className="flex gap-3"><span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#fff1bd] text-[#bc8d14]"><Phone className="size-4" /></span><div><strong className="block text-[#203047]">Phone</strong><span className="text-[#617686]">+91 [school phone]</span></div></div><div className="flex gap-3"><span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#ffe0d6] text-[#d4634e]"><Mail className="size-4" /></span><div><strong className="block text-[#203047]">Email</strong><span className="text-[#617686]">[school email]</span></div></div><div className="flex gap-3"><span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#e9e1f8] text-[#8064a9]"><Clock3 className="size-4" /></span><div><strong className="block text-[#203047]">School hours</strong><span className="text-[#617686]">9:00 AM – 1:00 PM</span></div></div></div><div className="mt-8 overflow-hidden rounded-[22px] border border-[#b9cbc4]"><iframe src="https://www.google.com/maps?q=57+Indira+Nagar+Sungam+Bye+Pass+Road+Coimbatore+641045&output=embed" width="100%" height="200" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Kidsnest location" /></div></div>
       <form className="rounded-[30px] border border-[#e5ded0] bg-white p-6 shadow-[var(--shadow-card)] sm:p-9" onSubmit={(event) => { event.preventDefault(); setSent(true); }}><div className="mb-7 flex items-center justify-between"><div><h2 className="font-display text-3xl tracking-[-.04em] text-[#203047]">Tell us a little about your family</h2><p className="mt-2 text-sm text-[#617686]">We’ll get back to you with a warm hello.</p></div><span className="hidden size-12 place-items-center rounded-2xl bg-[#fff1bd] text-[#bc8d14] sm:grid"><Send className="size-5" /></span></div>{sent ? <div className="rounded-2xl bg-[#dff3ec] p-7 text-center" role="status" data-testid="status-form-success"><span className="mx-auto grid size-12 place-items-center rounded-full bg-[#62ae9c] text-white"><Check /></span><h3 className="mt-4 font-display text-2xl text-[#203047]">Thank you for reaching out</h3><p className="mt-2 text-sm leading-6 text-[#527285]">Your enquiry is ready to be connected to the Kids Nest team. We look forward to speaking with you.</p><button type="button" onClick={() => setSent(false)} className="mt-5 text-xs font-bold text-[#1e9cb1] underline underline-offset-4" data-testid="button-send-another">Send another enquiry</button></div> : <div className="grid gap-4 sm:grid-cols-2">{[['name', 'Your name', 'text'], ['phone', 'Phone number', 'tel'], ['email', 'Email address', 'email'], ['age', 'Child’s age / class', 'text']].map(([id, label, type]) => <label key={id} className="grid gap-2 text-xs font-bold text-[#527285]">{label}<input required name={id} type={type} placeholder={label} className="h-12 rounded-xl border border-[#e5ded0] bg-[#fffdf8] px-4 text-sm font-medium text-[#203047] placeholder:text-[#9aa8aa] transition-colors focus:border-[#1e9cb1] focus:outline-none focus:ring-2 focus:ring-[#1e9cb1]/20" data-testid={`input-${id}`} /></label>)}<label className="grid gap-2 text-xs font-bold text-[#527285] sm:col-span-2">Message<textarea required name="message" placeholder="What would you like to know?" className="min-h-[110px] resize-y rounded-xl border border-[#e5ded0] bg-[#fffdf8] p-4 text-sm font-medium text-[#203047] placeholder:text-[#9aa8aa] transition-colors focus:border-[#1e9cb1] focus:outline-none focus:ring-2 focus:ring-[#1e9cb1]/20" data-testid="input-message" /></label><button type="submit" className="rounded-full bg-[#203047] px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-1 hover:bg-[#304a63] sm:col-span-2" data-testid="button-contact-submit">Let’s talk about your little one <Send className="ml-2 inline size-4" /></button></div>}</form>
     </div></section>;
 }
 
 function Footer() {
   const links = [['Home', 'home'], ['About', 'story'], ['Programs', 'programs'], ['Teachers', 'teachers'], ['Gallery', 'gallery'], ['Events', 'events'], ['Admissions', 'admissions'], ['Contact', 'contact']];
-  return <footer className="bg-[#203047] py-12 text-[#d1dede]"><div className="container-wide"><div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]"><div><a href="#home" className="inline-flex items-center" data-testid="link-footer-brand" aria-label="Kids Nest home"><span className="relative h-[70px] w-[148px] shrink-0 overflow-hidden rounded-md bg-white" aria-hidden="true"><img src={logo} alt="" className="absolute left-1/2 top-1/2 w-[180px] max-w-none -translate-x-1/2 -translate-y-1/2 mix-blend-multiply transition-transform hover:scale-[1.04]" /></span></a><p className="mt-5 max-w-xs text-sm leading-6 text-[#9db6bd]">Where little minds grow, explore & shine.</p>
-        <div className="mt-6 flex gap-2"><a href="#contact" aria-label="Kids Nest on Instagram" className="grid size-9 place-items-center rounded-full bg-white/10 transition-colors hover:bg-[#ef775f]" data-testid="link-instagram"><Instagram className="size-4" /></a><a href="#contact" aria-label="Kids Nest on Facebook" className="grid size-9 place-items-center rounded-full bg-white/10 transition-colors hover:bg-[#1e9cb1]" data-testid="link-facebook"><Facebook className="size-4" /></a><a href="#contact" aria-label="Kids Nest on YouTube" className="grid size-9 place-items-center rounded-full bg-white/10 transition-colors hover:bg-[#ef775f]" data-testid="link-youtube"><Youtube className="size-4" /></a></div></div><div><h2 className="text-xs font-bold uppercase tracking-[.18em] text-[#f3c94f]">Explore</h2><div className="mt-5 grid grid-cols-2 gap-x-5 gap-y-3">{links.map(([label, id]) => <a key={id} href={`#${id}`} className="text-sm text-[#a9c0c4] transition-colors hover:text-white" data-testid={`link-footer-${id}`}>{label}</a>)}</div></div><div><h2 className="text-xs font-bold uppercase tracking-[.18em] text-[#f3c94f]">Visit the nest</h2><p className="mt-5 text-sm leading-6 text-[#a9c0c4]">Coimbatore, Tamil Nadu<br />[school phone]<br />[school email]</p><a href="#contact" className="mt-5 inline-flex items-center text-sm font-bold text-white" data-testid="link-footer-contact">Start a conversation <ArrowUpRight className="ml-2 size-4" /></a></div></div><div className="mt-12 flex flex-col justify-between gap-3 border-t border-white/10 pt-6 text-xs text-[#78959d] sm:flex-row"><span>© 2026 Kids Nest. All Rights Reserved.</span><span>Made for curious beginnings.</span></div></div></footer>;
+  return <footer className="bg-[#203047] py-12 text-[#d1dede]"><div className="container-wide"><div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]"><div><a href="#home" className="inline-flex items-center" data-testid="link-footer-brand" aria-label="Kidsnest home"><span className="relative h-[70px] w-[148px] shrink-0 overflow-hidden rounded-md bg-white" aria-hidden="true"><img src={logo} alt="" className="absolute left-1/2 top-1/2 w-[180px] max-w-none -translate-x-1/2 -translate-y-1/2 mix-blend-multiply transition-transform hover:scale-[1.04]" /></span></a><p className="mt-5 max-w-xs text-sm leading-6 text-[#9db6bd]">Where little minds grow, explore & shine.</p>
+        <div className="mt-6 flex gap-2"><a href="#contact" aria-label="Kids Nest on Instagram" className="grid size-9 place-items-center rounded-full bg-white/10 transition-colors hover:bg-[#ef775f]" data-testid="link-instagram"><Instagram className="size-4" /></a><a href="#contact" aria-label="Kids Nest on Facebook" className="grid size-9 place-items-center rounded-full bg-white/10 transition-colors hover:bg-[#1e9cb1]" data-testid="link-facebook"><Facebook className="size-4" /></a><a href="#contact" aria-label="Kids Nest on YouTube" className="grid size-9 place-items-center rounded-full bg-white/10 transition-colors hover:bg-[#ef775f]" data-testid="link-youtube"><Youtube className="size-4" /></a></div></div><div><h2 className="text-xs font-bold uppercase tracking-[.18em] text-[#f3c94f]">Explore</h2><div className="mt-5 grid grid-cols-2 gap-x-5 gap-y-3">{links.map(([label, id]) => <a key={id} href={`#${id}`} className="text-sm text-[#a9c0c4] transition-colors hover:text-white" data-testid={`link-footer-${id}`}>{label}</a>)}</div></div><div><h2 className="text-xs font-bold uppercase tracking-[.18em] text-[#f3c94f]">Visit the nest</h2><p className="mt-5 text-sm leading-6 text-[#a9c0c4]">57, Indira Nagar, Sungam Bye-Pass Road,<br />Coimbatore - 641045<br />[school phone]<br />[school email]</p><a href="#contact" className="mt-5 inline-flex items-center text-sm font-bold text-white" data-testid="link-footer-contact">Start a conversation <ArrowUpRight className="ml-2 size-4" /></a></div></div><div className="mt-12 flex flex-col justify-between gap-3 border-t border-white/10 pt-6 text-xs text-[#78959d] sm:flex-row"><span>© 2026 Kidsnest. All Rights Reserved.</span><span>Made for curious beginnings.</span></div></div></footer>;
 }
 
 function Lightbox({ index, onClose, onChange }: { index: number; onClose: () => void; onChange: (index: number) => void }) {
@@ -296,7 +440,7 @@ function Home() {
     return () => observer.disconnect();
   }, []);
   useEffect(() => { document.body.style.overflow = lightbox !== null ? 'hidden' : ''; return () => { document.body.style.overflow = ''; }; }, [lightbox]);
-  return <div ref={pageRef} className="site-shell min-h-screen bg-[#fffaf1]"><Header onEnquire={() => { setEnquiryOpen(true); }} /><main><Hero onEnquire={() => setEnquiryOpen(true)} /><StorySection /><ProgramsSection /><TeachersSection /><ApproachSection /><WhySection /><GallerySection onOpen={setLightbox} /><EventsSection /><TestimonialSection /><GrowthSection /><CampusSection /><DaySection /><FAQSection /><AdmissionsCTA onEnquire={() => setEnquiryOpen(true)} /><ContactSection /></main><Footer />
+  return <div ref={pageRef} className="site-shell min-h-screen bg-[#fffaf1]"><Header onEnquire={() => { setEnquiryOpen(true); }} /><main><Hero onEnquire={() => setEnquiryOpen(true)} /><StorySection /><FounderSection /><ProgramsSection /><TeachersSection /><ApproachSection /><WhySection /><GallerySection onOpen={setLightbox} /><EventsSection /><TestimonialSection /><GrowthSection /><CampusSection /><DaySection /><FAQSection /><AdmissionsCTA onEnquire={() => setEnquiryOpen(true)} /><ContactSection /></main><Footer />
     <a href="#contact" className="fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 rounded-full bg-[#ef775f] px-5 py-3.5 text-sm font-bold text-white shadow-[0_10px_25px_rgba(239,119,95,.35)] transition-transform hover:-translate-y-1 sm:hidden" data-testid="link-mobile-floating-enquire"><MessageCircle className="size-4" /> Enquire now</a>
     {lightbox !== null && <Lightbox index={lightbox} onClose={closeLightbox} onChange={setLightbox} />}
     {enquiryOpen && <div className="fixed inset-0 z-50 grid place-items-center bg-[#203047]/50 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="enquiry-title" onMouseDown={(event) => { if (event.target === event.currentTarget) setEnquiryOpen(false); }}><div className="relative w-full max-w-md rounded-[28px] bg-[#fffaf1] p-7 shadow-[0_30px_80px_rgba(32,48,71,.28)]"><button onClick={() => setEnquiryOpen(false)} className="absolute right-5 top-5 grid size-9 place-items-center rounded-full bg-[#eef5f2] text-[#203047]" aria-label="Close enquiry dialog" data-testid="button-enquiry-close"><X className="size-4" /></button><span className="grid size-11 place-items-center rounded-2xl bg-[#f3c94f] text-[#203047]"><Sparkles className="size-5" /></span><h2 id="enquiry-title" className="mt-5 font-display text-3xl text-[#203047]">Let’s plan a visit</h2><p className="mt-2 text-sm leading-6 text-[#617686]">Share your details and the Kids Nest team will be in touch.</p><form className="mt-6 grid gap-3" onSubmit={(event) => { event.preventDefault(); setEnquiryOpen(false); scrollToId('contact'); }}><input required placeholder="Your name" aria-label="Your name" className="h-12 rounded-xl border border-[#e5ded0] bg-white px-4 text-sm focus:border-[#1e9cb1] focus:outline-none" data-testid="input-enquiry-name" /><input required type="tel" placeholder="Phone number" aria-label="Phone number" className="h-12 rounded-xl border border-[#e5ded0] bg-white px-4 text-sm focus:border-[#1e9cb1] focus:outline-none" data-testid="input-enquiry-phone" /><button className="mt-2 rounded-full bg-[#203047] py-4 text-sm font-bold text-white transition-colors hover:bg-[#304a63]" type="submit" data-testid="button-enquiry-submit">Continue to enquiry <ArrowRight className="ml-2 inline size-4" /></button></form></div></div>}

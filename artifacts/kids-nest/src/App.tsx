@@ -122,13 +122,13 @@ function HeroIllustration() {
       <div className="absolute left-[4%] top-[32%] text-4xl font-bold text-[#f3c94f] float-slow">+</div>
       <div className="absolute right-[1%] top-[52%] text-3xl font-bold text-[#1e9cb1] float-slower">+</div>
       <div className="absolute inset-x-[7%] bottom-[8%] top-[10%] rotate-[-2deg] rounded-[44px] border-[10px] border-white bg-[#f3c94f] p-3 shadow-[0_30px_70px_rgba(47,77,96,.18)]">
-        <div className="relative h-full overflow-hidden rounded-[29px]">
+        <div className="relative h-full overflow-hidden rounded-[29px] bg-black/5">
           <video
             src="/videos/kids-nest-intro.mp4"
             poster="/gallery/hero.jpeg"
             className="absolute inset-0 h-full w-full object-cover"
-            autoPlay
-            muted
+            controls
+            controlsList="nodownload"
             loop
             playsInline
             preload="metadata"

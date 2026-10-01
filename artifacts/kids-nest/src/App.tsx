@@ -10,7 +10,7 @@ import {
   ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Brain, CalendarDays,
   Check, ChevronDown, CirclePlay, Clock3, Compass, Heart, Instagram, Mail,
   MapPin, Menu, MessageCircle, Music2, Palette, Phone, ShieldCheck,
-  Sparkles, Star, Users, X, Youtube, Facebook, Leaf, Footprints, Target,
+  Sparkles, Star, Users, X, Youtube, Facebook, Leaf, Target,
   Accessibility, Lightbulb, TreePine, Dumbbell, Send, Eye, Sun, Baby, Moon, School
 } from 'lucide-react';
 import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
@@ -483,12 +483,9 @@ function TestimonialSection() {
   );
 }
 
-function GrowthSection() {
-  const areas = [[Brain, 'Cognitive growth'], [MessageCircle, 'Communication'], [Heart, 'Emotional development'], [Users, 'Social skills'], [Footprints, 'Physical development']];
-  return <section className="section-pad bg-page"><div className="container-wide grid items-center gap-14 lg:grid-cols-[1.05fr_.95fr]"><div><SectionHeading eyebrow="A whole-child approach" title="Growing more than just young minds" text="The early years are a time of remarkable growth. We nurture the thinking, feeling, moving and connecting that make each child uniquely whole." /><div className="mt-10 grid gap-2 sm:grid-cols-2">{areas.map(([Icon, label], index) => { const AreaIcon = Icon as typeof Brain; return <div className="flex items-center gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-section-mint/60" key={label as string}><span className="grid size-9 place-items-center rounded-full bg-section-mint/80 text-brand-teal"><AreaIcon className="size-4" /></span><span className="text-sm font-bold text-primary">{label as string}</span></div>; })}</div></div><div className="relative min-h-[410px]"><div className="absolute left-[18%] top-[10%] size-[66%] rounded-[50%] bg-card-prekg" /><div className="absolute bottom-[12%] left-[45%] h-[65%] w-10 rounded-full bg-[#8e6750]" /><div className="absolute bottom-[38%] left-[28%] h-12 w-48 rotate-[-30deg] rounded-full bg-[#79b881] shadow-[45px_38px_0_#79b881]" /><div className="absolute bottom-[50%] left-[47%] h-12 w-52 rotate-[28deg] rounded-full bg-[#9aca91] shadow-[-50px_37px_0_#9aca91]" /><div className="absolute left-[30%] top-[14%] size-20 rounded-full bg-[#79b881] shadow-[64px_16px_0_#9aca91,120px_-5px_0_#79b881,167px_28px_0_#9aca91]" /><div className="absolute bottom-[19%] left-[35%] size-14 rounded-full bg-brand-coral shadow-[85px_18px_0_#f3c94f,-68px_28px_0_#7eafcc]" /><span className="absolute bottom-[4%] right-[9%] rounded-full border-2 border-dashed border-[var(--brand-mint)] px-4 py-2 text-xs font-bold text-[var(--brand-mint)]">rooted in care</span></div></div></section>;
-}
 
-function CampusSection() {
+
+function FacilitySection() {
   const spaces = [
     { title: 'Classrooms', description: 'Bright, calm spaces made for curious hands.', photo: '/gallery/campus-classroom.jpeg' },
     { title: 'Activity areas', description: 'Room to paint, build, sing and make a happy mess.', photo: '/gallery/campus-activity.jpeg' },
@@ -503,12 +500,9 @@ function CampusSection() {
         <SectionHeading eyebrow="Come see the nest" title="A campus designed for little discoveries" text="From the first hello to the final story, our spaces are warm, inviting and thoughtfully arranged around children." />
         <div className="mt-11 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {spaces.map(({ title, description, photo }, index) => (
-            <div key={title} className="group relative overflow-hidden rounded-[22px]" data-testid={`campus-card-${index}`}>
+            <div key={title} className="group relative overflow-hidden rounded-[22px]" data-testid={`facility-card-${index}`}>
               <div className="relative aspect-[4/3] overflow-hidden bg-[#3c2828]">
-                {photo
-                  ? <img src={photo} alt={title} className="absolute inset-0 h-full w-full object-cover" />
-                  : <div className="flex h-full items-center justify-center text-sm font-bold text-[#c8a898]">Photo coming soon</div>
-                }
+                <img src={photo} alt={title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <h3 className="font-display text-xl text-white">{title}</h3>
@@ -518,8 +512,61 @@ function CampusSection() {
             </div>
           ))}
         </div>
-        <div className="mt-8 text-center">
-          <button onClick={() => scrollToId('gallery')} className="inline-flex items-center rounded-full bg-[#E8231A] px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-1 hover:bg-[#C41A12]" data-testid="button-virtual-peek">Take a virtual peek <CirclePlay className="ml-2.5 size-4" /></button>
+      </div>
+    </section>
+  );
+}
+
+function ConductedEventsSection() {
+  const events = [
+    { title: "Children's Day", date: 'November 14', description: 'A joyful celebration of childhood with games, performances and lots of smiles.', photo: '/events/childrens-day.jpeg', color: 'bg-card-playgroup' },
+    { title: 'World Photography Day', date: 'August 19', description: 'Little photographers explored the world through a lens, capturing their unique perspective.', photo: '/events/world-photography-day.jpeg', color: 'bg-card-prekg' },
+    { title: 'Fancy Dress Competition', date: 'December', description: 'Our little ones dressed up as their favourite characters and stole every heart in the room.', photo: '/events/fancy-dress.jpeg', color: 'bg-card-lkg' },
+    { title: 'Mango Day', date: 'July', description: 'A fruity, fun-filled day celebrating the king of fruits with activities, crafts and yummy treats.', photo: '/events/mango-day.jpg', color: 'bg-card-ukg' },
+  ];
+  return (
+    <section id="events" className="section-pad bg-page">
+      <div className="container-wide">
+        <SectionHeading eyebrow="Events we celebrated" title="Moments that made us smile" text="Every event at Kidsnest is a memory in the making — full of colour, laughter and little surprises." />
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          {events.map(({ title, date, description, photo, color }, index) => (
+            <article key={title} className={`group overflow-hidden rounded-[28px] ${color} transition-all duration-300 hover:-translate-y-2`} data-testid={`conducted-event-${index}`}>
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img src={photo} alt={title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <span className="absolute right-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[.65rem] font-bold text-primary">{date}</span>
+              </div>
+              <div className="p-5">
+                <h3 className="font-display text-xl text-primary">{title}</h3>
+                <p className="mt-2 text-sm leading-6 text-secondary">{description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CampusSection() {
+  const photos = [
+    { src: '/campus/campus-1.jpeg', alt: 'Kids at Kidsnest', span: 'lg:col-span-2 lg:row-span-2' },
+    { src: '/campus/campus-2.jpeg', alt: 'Kidsnest Building', span: '' },
+    { src: '/campus/campus-3.jpeg', alt: 'Kidsnest Building exterior', span: '' },
+    { src: '/campus/campus-4.jpeg', alt: 'Kids learning', span: '' },
+    { src: '/campus/campus-5.jpeg', alt: 'Activity hall', span: '' },
+  ];
+  return (
+    <section id="campus" className="section-pad bg-section-sky">
+      <div className="container-wide">
+        <SectionHeading eyebrow="Our campus" title="A place built for little explorers" text="Every corner of Kidsnest is thoughtfully designed to spark curiosity, encourage play and make children feel right at home." />
+        <div className="mt-11 grid grid-cols-2 gap-3 lg:grid-cols-4 lg:grid-rows-2">
+          {photos.map(({ src, alt, span }, index) => (
+            <div key={index} className={`group relative overflow-hidden rounded-[22px] ${span} aspect-[4/3]`} data-testid={`campus-photo-${index}`}>
+              <img src={src} alt={alt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -566,7 +613,7 @@ function Home() {
     return () => observer.disconnect();
   }, []);
   useEffect(() => { document.body.style.overflow = lightbox !== null ? 'hidden' : ''; return () => { document.body.style.overflow = ''; }; }, [lightbox]);
-  return <div ref={pageRef} className="site-shell min-h-screen bg-page"><Header onEnquire={() => { setEnquiryOpen(true); }} /><main><Hero onEnquire={() => setEnquiryOpen(true)} /><StorySection /><FounderSection /><ProgramsSection /><LittleNestSection onEnquire={() => setEnquiryOpen(true)} /><TeachersSection /><ApproachSection /><WhySection /><GallerySection onOpen={setLightbox} /><EventsSection /><TestimonialSection /><GrowthSection /><CampusSection /><FAQSection /><AdmissionsCTA onEnquire={() => setEnquiryOpen(true)} /><ContactSection /></main><Footer />
+  return <div ref={pageRef} className="site-shell min-h-screen bg-page"><Header onEnquire={() => { setEnquiryOpen(true); }} /><main><Hero onEnquire={() => setEnquiryOpen(true)} /><StorySection /><FounderSection /><ProgramsSection /><LittleNestSection onEnquire={() => setEnquiryOpen(true)} /><TeachersSection /><ApproachSection /><WhySection /><GallerySection onOpen={setLightbox} /><EventsSection /><TestimonialSection /><FacilitySection /><ConductedEventsSection /><CampusSection /><FAQSection /><AdmissionsCTA onEnquire={() => setEnquiryOpen(true)} /><ContactSection /></main><Footer />
     <a href="#contact" className="fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 rounded-full bg-[#E8231A] px-5 py-3.5 text-sm font-bold text-white shadow-[0_10px_25px_rgba(232,35,26,.35)] transition-transform hover:-translate-y-1 sm:hidden" data-testid="link-mobile-floating-enquire"><MessageCircle className="size-4" /> Enquire now</a>
     {lightbox !== null && <Lightbox index={lightbox} onClose={closeLightbox} onChange={setLightbox} />}
     {enquiryOpen && <div className="fixed inset-0 z-50 grid place-items-center bg-primary/50 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="enquiry-title" onMouseDown={(event) => { if (event.target === event.currentTarget) setEnquiryOpen(false); }}><div className="relative w-full max-w-md rounded-[28px] bg-page p-7 shadow-[0_30px_80px_rgba(32,48,71,.28)]"><button onClick={() => setEnquiryOpen(false)} className="absolute right-5 top-5 grid size-9 place-items-center rounded-full bg-section-mint/60 text-primary" aria-label="Close enquiry dialog" data-testid="button-enquiry-close"><X className="size-4" /></button><span className="grid size-11 place-items-center rounded-2xl bg-brand-gold text-primary"><Sparkles className="size-5" /></span><h2 id="enquiry-title" className="mt-5 font-display text-3xl text-primary">Let's plan a visit</h2><p className="mt-2 text-sm leading-6 text-tertiary">Share your details and the Kids Nest team will be in touch.</p><form className="mt-6 grid gap-3" onSubmit={(event) => { event.preventDefault(); setEnquiryOpen(false); scrollToId('contact'); }}><input required placeholder="Your name" aria-label="Your name" className="h-12 rounded-xl border border-light bg-input px-4 text-sm focus:border-brand-teal focus:outline-none" data-testid="input-enquiry-name" /><input required type="tel" placeholder="Phone number" aria-label="Phone number" className="h-12 rounded-xl border border-light bg-input px-4 text-sm focus:border-brand-teal focus:outline-none" data-testid="input-enquiry-phone" /><button className="mt-2 rounded-full bg-[#E8231A] py-4 text-sm font-bold text-white transition-colors hover:bg-[#C41A12]" type="submit" data-testid="button-enquiry-submit">Continue to enquiry <ArrowRight className="ml-2 inline size-4" /></button></form></div></div>}

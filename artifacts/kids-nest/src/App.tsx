@@ -32,11 +32,11 @@ const teachers = [
 
 const gallery = [
   { label: 'Classroom Activities', tone: 'sky', caption: 'Curious hands at work', photo: '/gallery/gallery-1.jpeg' },
-  { label: 'Art & Craft', tone: 'coral', caption: 'Colour outside the lines', photo: '/gallery/gallery-2.jpeg' },
+  { label: 'Art & Craft', tone: 'coral', caption: 'Little hands, big creativity', photo: '/gallery/gallery-2.jpeg' },
   { label: 'Outdoor Play', tone: 'mint', caption: 'Room to run and wonder', photo: '/gallery/gallery-3.jpeg' },
-  { label: 'Celebrations', tone: 'yellow', caption: 'Little moments, big memories', photo: '/gallery/gallery-4.jpeg' },
-  { label: 'Reading Corner', tone: 'lavender', caption: 'Stories take flight here', photo: '/gallery/gallery-5.png' },
-  { label: 'Nature Day', tone: 'peach', caption: 'A closer look at the world', photo: '/gallery/gallery-6.jpeg' },
+  { label: 'Celebrations', tone: 'yellow', caption: 'Every moment worth celebrating', photo: '/gallery/gallery-4.jpeg' },
+  { label: 'Creative Play', tone: 'lavender', caption: 'Imagination has no limits', photo: '/gallery/gallery-5.jpeg' },
+  { label: 'Active Play', tone: 'peach', caption: 'Energy, joy and lots of fun', photo: '/gallery/gallery-6.jpeg' },
 ];
 
 const faqs = [
@@ -419,7 +419,7 @@ function WhySection() {
 
 function GallerySection({ onOpen }: { onOpen: (index: number) => void }) {
   return <section id="activities" className="section-pad bg-section-mint"><div className="container-wide"><div className="flex flex-wrap items-end justify-between gap-6"><SectionHeading eyebrow="A window into our days" title="Little moments. Big memories." text="Every day is an adventure - and the ordinary moments are often the ones families remember most." /><div className="mb-1 flex items-center gap-2 text-xs font-bold text-secondary"><Eye className="size-4 text-brand-teal" /> Tap a story to take a closer look</div></div>
-    <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3">{gallery.map((item, index) => <button onClick={() => onOpen(index)} key={item.label} className={`group relative overflow-hidden rounded-[24px] text-left ${index === 1 || index === 4 ? 'aspect-[.9]' : 'aspect-[1.1]'}`} data-testid={`button-gallery-${index}`} aria-label={`Open ${item.label} gallery image`}><img src={item.photo} alt={item.label} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" /><div className="absolute inset-0 bg-gradient-to-t from-primary/65 via-transparent to-transparent" /><span className="absolute bottom-5 left-5 right-5 text-white"><small className="block text-[.62rem] font-bold uppercase tracking-[.13em] text-white/75">{item.label}</small><strong className="mt-1 block font-display text-lg leading-tight">{item.caption}</strong></span><span className="absolute right-4 top-4 grid size-9 place-items-center rounded-full bg-white/85 text-primary opacity-0 transition-opacity group-hover:opacity-100"><ArrowUpRight className="size-4" /></span></button>)}</div>
+    <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3">{gallery.map((item, index) => <button onClick={() => onOpen(index)} key={item.label} className={`group relative overflow-hidden rounded-[24px] text-left ${index === 5 ? 'bg-[#1a2530]' : ''} ${index === 1 || index === 4 ? 'aspect-[.9]' : 'aspect-[1.1]'}`} data-testid={`button-gallery-${index}`} aria-label={`Open ${item.label} gallery image`}><img src={item.photo} alt={item.label} className={`absolute inset-0 h-full w-full transition-transform duration-500 group-hover:scale-105 ${index === 5 ? 'object-contain' : 'object-cover'}`} /><div className="absolute inset-0 bg-gradient-to-t from-primary/65 via-transparent to-transparent" /><span className="absolute bottom-5 left-5 right-5 text-white"><small className="block text-[.62rem] font-bold uppercase tracking-[.13em] text-white/75">{item.label}</small><strong className="mt-1 block font-display text-lg leading-tight">{item.caption}</strong></span><span className="absolute right-4 top-4 grid size-9 place-items-center rounded-full bg-white/85 text-primary opacity-0 transition-opacity group-hover:opacity-100"><ArrowUpRight className="size-4" /></span></button>)}</div>
   </div></section>;
 }
 

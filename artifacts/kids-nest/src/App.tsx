@@ -495,7 +495,7 @@ function FacilitySection() {
     { title: 'Music & activity space', description: 'A place for rhythm, expression and growing confidence.', photo: '/gallery/campus-music.jpeg' },
   ];
   return (
-    <section id="facility" className="section-pad bg-[#fdf5f0]">
+    <section id="facility" className="section-pad bg-page">
       <div className="container-wide">
         <SectionHeading eyebrow="Come see the nest" title="A campus designed for little discoveries" text="From the first hello to the final story, our spaces are warm, inviting and thoughtfully arranged around children." />
         <div className="mt-11 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -557,7 +557,7 @@ function CampusSection() {
     { src: '/campus/campus-5.jpeg', alt: 'Activity hall', span: '' },
   ];
   return (
-    <section id="campus" className="section-pad bg-section-sky">
+    <section id="campus" className="section-pad bg-page">
       <div className="container-wide">
         <SectionHeading eyebrow="Our campus" title="A place built for little explorers" text="Every corner of Kidsnest is thoughtfully designed to spark curiosity, encourage play and make children feel right at home." />
         <div className="mt-11 grid grid-cols-2 gap-3 lg:grid-cols-4 lg:grid-rows-2">

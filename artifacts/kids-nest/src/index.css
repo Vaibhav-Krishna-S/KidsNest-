@@ -116,19 +116,19 @@
   --border-input: #E5E0D5;
   
   /* Buttons */
-  --btn-primary: #18A7B8;
+  --btn-primary: #E8231A;
   --btn-primary-text: #FFFFFF;
-  --btn-primary-hover: #128A99;
+  --btn-primary-hover: #C41A12;
   --btn-secondary: #FFF9ED;
   --btn-secondary-text: #203047;
-  --btn-accent: #FFD45A;
-  --btn-accent-text: #203047;
+  --btn-accent: #E8231A;
+  --btn-accent-text: #FFFFFF;
   
   /* Form States */
   --input-placeholder: #9AA8AA;
   
   /* Shadows */
-  --shadow-button: 0 10px 24px rgba(24, 167, 184, 0.12);
+  --shadow-button: 0 10px 24px rgba(232, 35, 26, 0.12);
   --shadow-card: 0 12px 35px rgba(32, 48, 71, 0.08);
   --shadow-large: 0 30px 70px rgba(32, 48, 71, 0.12);
   --shadow-soft: 0 20px 60px rgba(32, 48, 71, 0.08);
@@ -301,7 +301,7 @@
 .site-shell { overflow: clip; }
 .container-wide { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
 .section-pad { padding-block: clamp(74px, 9vw, 132px); }
-.eyebrow { display: inline-flex; align-items: center; gap: 9px; color: hsl(var(--primary)); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; }
+.eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #E8231A; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; }
 .eyebrow::before { content: ''; width: 28px; height: 2px; border-radius: 99px; background: currentColor; }
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .75s ease, transform .75s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }

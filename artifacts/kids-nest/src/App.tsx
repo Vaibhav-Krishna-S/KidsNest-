@@ -115,6 +115,16 @@ function Hero({ onEnquire }: { onEnquire: () => void }) {
 }
 
 function HeroIllustration() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlayClick = () => {
+    setIsPlaying(true);
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
   return (
     <div className="relative mx-auto h-full min-h-[470px] w-full max-w-[610px] reveal is-visible delay-2">
       <div className="absolute right-[8%] top-[1%] size-16 rotate-12 rounded-full border-4 border-[#f3c94f] bg-[#fff8d8] shadow-[0_8px_0_rgba(243,201,79,.2)] float-slower" />
@@ -122,18 +132,33 @@ function HeroIllustration() {
       <div className="absolute left-[4%] top-[32%] text-4xl font-bold text-[#f3c94f] float-slow">+</div>
       <div className="absolute right-[1%] top-[52%] text-3xl font-bold text-[#1e9cb1] float-slower">+</div>
       <div className="absolute inset-x-[7%] bottom-[8%] top-[10%] rotate-[-2deg] rounded-[44px] border-[10px] border-white bg-[#f3c94f] p-3 shadow-[0_30px_70px_rgba(47,77,96,.18)]">
-        <div className="relative h-full overflow-hidden rounded-[29px] bg-black/5">
+        <div className="relative h-full overflow-hidden rounded-[29px] bg-black/5 group cursor-pointer">
           <video
+            ref={videoRef}
             src="/videos/kids-nest-intro.mp4"
             poster="/gallery/hero.jpeg"
             className="absolute inset-0 h-full w-full object-cover"
-            controls
+            controls={isPlaying}
             controlsList="nodownload"
             loop
             playsInline
             preload="metadata"
             aria-label="Kids Nest school introduction video"
           />
+          {!isPlaying && (
+            <button
+              onClick={handlePlayClick}
+              className="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 hover:bg-black/30 group-hover:bg-black/30"
+              aria-label="Play Kids Nest introduction video"
+            >
+              <div className="flex flex-col items-center gap-3">
+                <div className="grid size-16 place-items-center rounded-full bg-white shadow-lg transition-transform group-hover:scale-110">
+                  <CirclePlay className="size-8 text-[#1e9cb1] fill-[#1e9cb1]" />
+                </div>
+                <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-[#203047] shadow-md transition-opacity group-hover:opacity-100">Hear our Story</span>
+              </div>
+            </button>
+          )}
         </div>
       </div>
       <div className="absolute bottom-[2%] right-[2%] rotate-[4deg] rounded-2xl bg-white px-4 py-3 shadow-[0_12px_25px_rgba(47,77,96,.12)]"><p className="font-display text-lg text-[#203047]">wonder lives here</p><div className="mt-1 flex gap-1 text-[#f3c94f]"><Star className="size-3 fill-current" /><Star className="size-3 fill-current" /><Star className="size-3 fill-current" /></div></div>

@@ -123,7 +123,17 @@ function HeroIllustration() {
       <div className="absolute right-[1%] top-[52%] text-3xl font-bold text-[#1e9cb1] float-slower">+</div>
       <div className="absolute inset-x-[7%] bottom-[8%] top-[10%] rotate-[-2deg] rounded-[44px] border-[10px] border-white bg-[#f3c94f] p-3 shadow-[0_30px_70px_rgba(47,77,96,.18)]">
         <div className="relative h-full overflow-hidden rounded-[29px]">
-          <img src="/gallery/hero.jpeg" alt="Kids Nest classroom" className="absolute inset-0 h-full w-full object-contain" />
+          <video
+            src="/videos/kids-nest-intro.mp4"
+            poster="/gallery/hero.jpeg"
+            className="absolute inset-0 h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Kids Nest school introduction video"
+          />
         </div>
       </div>
       <div className="absolute bottom-[2%] right-[2%] rotate-[4deg] rounded-2xl bg-white px-4 py-3 shadow-[0_12px_25px_rgba(47,77,96,.12)]"><p className="font-display text-lg text-[#203047]">wonder lives here</p><div className="mt-1 flex gap-1 text-[#f3c94f]"><Star className="size-3 fill-current" /><Star className="size-3 fill-current" /><Star className="size-3 fill-current" /></div></div>

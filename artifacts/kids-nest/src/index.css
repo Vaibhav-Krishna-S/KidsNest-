@@ -36,86 +36,123 @@
 }
 
 :root {
-  /* ===== LIGHT THEME - SEMANTIC VARIABLES ===== */
+  /* ===== LIGHT THEME - KIDS NEST PREMIUM COLOR PALETTE ===== */
   
-  /* Core Surfaces */
-  --bg-page: #fffaf1;
-  --bg-section-mint: #edf6f3;
-  --bg-section-peach: #f3e9e0;
-  --bg-section-hero: #dff3f5;
+  /* Core Brand Colors - The Language */
+  --brand-navy: #203047;
+  --brand-teal: #18A7B8;
+  --brand-coral: #FF806B;
+  --brand-yellow: #FFD45A;
+  --brand-mint: #BFE8D8;
+  --brand-sky: #C9EEF5;
+  --brand-lavender: #DDD2F4;
+  --brand-apricot: #FFD9C7;
+  --brand-cream: #FFF9ED;
+  
+  /* Page & Section Backgrounds (60% of palette - warm, breathing space) */
+  --bg-page: #FFF9ED;
+  --bg-section-mint: #BFE8D8;
+  --bg-section-sky: #C9EEF5;
+  --bg-section-lavender: #DDD2F4;
+  --bg-section-peach: #FFD9C7;
+  --bg-section-hero: #E8F8FA;
   --bg-section-dark: #203047;
-  --bg-card: #ffffff;
-  --bg-input: #fffdf8;
-  --bg-surface-light: #f7f2e8;
+  --bg-card: #FFFFFF;
+  --bg-input: #FFF9ED;
+  --bg-surface-light: #FFF9ED;
   
-  /* Text Colors */
+  /* Text Colors (20% of palette - navy for typography) */
   --text-primary: #203047;
   --text-secondary: #527285;
-  --text-tertiary: #617686;
-  --text-light-on-dark: #f0f5eb;
-  --text-light-muted: #d1dede;
+  --text-tertiary: #7A8C95;
+  --text-light-on-dark: #FFF9ED;
+  --text-light-muted: #D1DDE5;
   
-  /* Brand Colors (Accent - Stay Colorful) */
-  --brand-teal: #1e9cb1;
-  --brand-coral: #ef775f;
-  --brand-gold: #f3c94f;
-  --brand-navy: #203047;
+  /* Interactive Colors (10% teal, 5% coral, 3% yellow) */
+  --color-teal: #18A7B8;
+  --color-teal-hover: #128A99;
+  --color-coral: #FF806B;
+  --color-yellow: #FFD45A;
   
-  /* Program Card Colors (Semantic - Always Colorful in Light) */
-  --card-playgroup: #dff3ec;
-  --card-prekg: #fff1bd;
-  --card-lkg: #ffe0d6;
-  --card-ukg: #e9e1f8;
+  /* Program Card Colors - Playful & Collectible */
+  --card-playgroup: #BFE8D8;
+  --card-prekg: #C9EEF5;
+  --card-lkg: #DDD2F4;
+  --card-ukg: #FFD9C7;
   
-  /* Campus Card Colors (Always Colorful in Light) */
-  --campus-classrooms: #b9e2e2;
-  --campus-activity: #f5d478;
-  --campus-reading: #d9cbed;
-  --campus-outdoor: #a9d4a8;
-  --campus-playzone: #f5bea9;
-  --campus-music: #add5e5;
+  /* Activity Card Colors (Learning Philosophy section) */
+  --activity-art: #C9EEF5;
+  --activity-storytelling: #DDD2F4;
+  --activity-music: #FFD45A;
+  --activity-cognitive: #BFE8D8;
+  --activity-nature: #BFE8D8;
+  --activity-physical: #FFD9C7;
+  --activity-literacy: #C9EEF5;
+  --activity-numeracy: #FF806B;
+  --activity-social: #FFF9ED;
+  
+  /* Campus Card Colors */
+  --campus-classrooms: #C9EEF5;
+  --campus-activity: #FFD45A;
+  --campus-reading: #DDD2F4;
+  --campus-outdoor: #BFE8D8;
+  --campus-playzone: #FFD9C7;
+  --campus-music: #C9EEF5;
+  
+  /* Event Colors */
+  --event-annual: #FFD45A;
+  --event-artists: #FFD9C7;
+  --event-sports: #BFE8D8;
+  
+  /* Icon/Contact Colors */
+  --icon-map: #18A7B8;
+  --icon-phone: #FFD45A;
+  --icon-email: #FF806B;
+  --icon-clock: #DDD2F4;
   
   /* Borders */
-  --border-light: #e5ded0;
-  --border-subtle: #d8e2df;
-  --border-input: #e5ded0;
+  --border-light: #E5E0D5;
+  --border-subtle: #D8D0C5;
+  --border-input: #E5E0D5;
   
   /* Buttons */
-  --btn-primary: #203047;
-  --btn-primary-text: #ffffff;
-  --btn-primary-hover: #304a63;
-  --btn-cta: #1e9cb1;
-  --btn-cta-hover: #177e90;
+  --btn-primary: #18A7B8;
+  --btn-primary-text: #FFFFFF;
+  --btn-primary-hover: #128A99;
+  --btn-secondary: #FFF9ED;
+  --btn-secondary-text: #203047;
+  --btn-accent: #FFD45A;
+  --btn-accent-text: #203047;
   
   /* Form States */
-  --input-placeholder: #9aa8aa;
+  --input-placeholder: #9AA8AA;
   
   /* Shadows */
-  --shadow-button: 0 10px 24px rgba(32,48,71,.18);
-  --shadow-card: 0 12px 35px rgba(47,77,96,.08);
-  --shadow-large: 0 30px 70px rgba(47,77,96,.18);
-  --shadow-soft: 0 20px 60px rgba(47,77,96,.10);
+  --shadow-button: 0 10px 24px rgba(24, 167, 184, 0.12);
+  --shadow-card: 0 12px 35px rgba(32, 48, 71, 0.08);
+  --shadow-large: 0 30px 70px rgba(32, 48, 71, 0.12);
+  --shadow-soft: 0 20px 60px rgba(32, 48, 71, 0.08);
   
   /* Legacy HSL Variables (for Tailwind integration) */
-  --background: 44 63% 97%;
+  --background: 36 100% 99%;
   --foreground: 219 33% 19%;
-  --border: 37 30% 86%;
-  --input: 37 30% 86%;
-  --ring: 197 76% 43%;
-  --card: 43 58% 99%;
+  --border: 30 25% 90%;
+  --input: 36 100% 99%;
+  --ring: 179 49% 35%;
+  --card: 0 0% 100%;
   --card-foreground: 219 33% 19%;
-  --card-border: 37 32% 88%;
-  --popover: 43 58% 99%;
+  --card-border: 30 25% 90%;
+  --popover: 0 0% 100%;
   --popover-foreground: 219 33% 19%;
-  --popover-border: 37 32% 88%;
-  --primary: 197 76% 43%;
+  --popover-border: 30 25% 90%;
+  --primary: 179 49% 35%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 47 95% 66%;
-  --secondary-foreground: 219 33% 19%;
-  --muted: 42 42% 92%;
+  --secondary: 179 49% 35%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 36 30% 94%;
   --muted-foreground: 217 17% 42%;
-  --accent: 159 45% 61%;
-  --accent-foreground: 219 33% 19%;
+  --accent: 179 49% 35%;
+  --accent-foreground: 0 0% 100%;
   --destructive: 10 74% 58%;
   --destructive-foreground: 0 0% 100%;
   --app-font-sans: 'DM Sans', sans-serif;
@@ -125,88 +162,125 @@
 }
 
 .dark {
-  /* ===== DARK THEME - SEMANTIC VARIABLES ===== */
+  /* ===== DARK THEME - KIDS NEST PREMIUM COLOR PALETTE ===== */
   
   /* Core Surfaces */
-  --bg-page: #0b1117;
-  --bg-section-mint: #1f3d3a;
-  --bg-section-peach: #3d2a1f;
-  --bg-section-hero: #10242a;
-  --bg-section-dark: #111b24;
-  --bg-card: #14232b;
-  --bg-input: #17232d;
-  --bg-surface-light: #1a2d35;
+  --bg-page: #0F1419;
+  --bg-section-mint: #1A3A35;
+  --bg-section-sky: #1A3A42;
+  --bg-section-lavender: #2A2540;
+  --bg-section-peach: #3A2A1F;
+  --bg-section-hero: #162630;
+  --bg-section-dark: #0F1419;
+  --bg-card: #1A242D;
+  --bg-input: #161F27;
+  --bg-surface-light: #1A2530;
   
   /* Text Colors */
-  --text-primary: #f7f4ea;
-  --text-secondary: #a9bbc0;
-  --text-tertiary: #7a8a90;
-  --text-light-on-dark: #f7f4ea;
-  --text-light-muted: #a9bbc0;
+  --text-primary: #F5F3ED;
+  --text-secondary: #A9BCC5;
+  --text-tertiary: #7A8C95;
+  --text-light-on-dark: #F5F3ED;
+  --text-light-muted: #7A8C95;
   
-  /* Brand Colors (Accent - Stay Colorful) */
-  --brand-teal: #1e9cb1;
-  --brand-coral: #ef775f;
-  --brand-gold: #f3c94f;
+  /* Brand Colors (Stay vibrant in dark mode) */
+  --brand-teal: #36C8DD;
+  --brand-coral: #FF9980;
+  --brand-yellow: #FFE47A;
+  --brand-mint: #6DD4BB;
+  --brand-sky: #7FD9EB;
+  --brand-lavender: #D4CCEE;
+  --brand-apricot: #FFD9C7;
+  --brand-cream: #F5F3ED;
   --brand-navy: #203047;
   
-  /* Program Card Colors (Semantic - Tinted Dark Backgrounds) */
-  --card-playgroup: #1f3d3a;
-  --card-prekg: #3d3620;
-  --card-lkg: #402020;
-  --card-ukg: #2a2738;
+  /* Interactive Colors (brightened for dark mode) */
+  --color-teal: #36C8DD;
+  --color-teal-hover: #48D4E8;
+  --color-coral: #FF9980;
+  --color-yellow: #FFE47A;
   
-  /* Campus Card Colors (Tinted Dark Backgrounds) */
-  --campus-classrooms: #1f3d3a;
-  --campus-activity: #3d3620;
-  --campus-reading: #2a2738;
-  --campus-outdoor: #1f3528;
-  --campus-playzone: #3d2a1f;
-  --campus-music: #1f3d3a;
+  /* Program Card Colors (tinted dark backgrounds) */
+  --card-playgroup: #1A3A35;
+  --card-prekg: #1A3A42;
+  --card-lkg: #2A2540;
+  --card-ukg: #3A2A1F;
+  
+  /* Activity Card Colors (Learning Philosophy section) */
+  --activity-art: #1A3A42;
+  --activity-storytelling: #2A2540;
+  --activity-music: #3A3020;
+  --activity-cognitive: #1A3A35;
+  --activity-nature: #1A3A35;
+  --activity-physical: #3A2A1F;
+  --activity-literacy: #1A3A42;
+  --activity-numeracy: #3A2625;
+  --activity-social: #1A2530;
+  
+  /* Campus Card Colors */
+  --campus-classrooms: #1A3A42;
+  --campus-activity: #3A3020;
+  --campus-reading: #2A2540;
+  --campus-outdoor: #1A3A35;
+  --campus-playzone: #3A2A1F;
+  --campus-music: #1A3A42;
+  
+  /* Event Colors */
+  --event-annual: #3A3020;
+  --event-artists: #3A2A1F;
+  --event-sports: #1A3A35;
+  
+  /* Icon/Contact Colors */
+  --icon-map: #36C8DD;
+  --icon-phone: #FFE47A;
+  --icon-email: #FF9980;
+  --icon-clock: #D4CCEE;
   
   /* Borders */
-  --border-light: #293a43;
-  --border-subtle: #22323a;
-  --border-input: #293a43;
+  --border-light: #293540;
+  --border-subtle: #202D38;
+  --border-input: #293540;
   
   /* Buttons */
-  --btn-primary: #f7f4ea;
-  --btn-primary-text: #203047;
-  --btn-primary-hover: #e8e5db;
-  --btn-cta: #1e9cb1;
-  --btn-cta-hover: #177e90;
+  --btn-primary: #36C8DD;
+  --btn-primary-text: #0F1419;
+  --btn-primary-hover: #48D4E8;
+  --btn-secondary: #1A242D;
+  --btn-secondary-text: #F5F3ED;
+  --btn-accent: #FFE47A;
+  --btn-accent-text: #0F1419;
   
   /* Form States */
-  --input-placeholder: #6a7a80;
+  --input-placeholder: #6A7A82;
   
   /* Shadows */
-  --shadow-button: 0 10px 24px rgba(0,0,0,.4);
-  --shadow-card: 0 12px 35px rgba(0,0,0,.3);
-  --shadow-large: 0 30px 70px rgba(0,0,0,.5);
-  --shadow-soft: 0 20px 60px rgba(0,0,0,.3);
+  --shadow-button: 0 10px 24px rgba(54, 200, 221, 0.15);
+  --shadow-card: 0 12px 35px rgba(0, 0, 0, 0.3);
+  --shadow-large: 0 30px 70px rgba(0, 0, 0, 0.5);
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.3);
   
   /* Legacy HSL Variables (for Tailwind integration) */
-  --background: 219 33% 12%;
-  --foreground: 43 58% 97%;
+  --background: 219 33% 10%;
+  --foreground: 36 100% 97%;
   --border: 217 25% 25%;
-  --input: 217 25% 25%;
-  --ring: 197 76% 53%;
-  --card: 219 29% 17%;
-  --card-foreground: 43 58% 97%;
+  --input: 217 25% 15%;
+  --ring: 179 70% 40%;
+  --card: 219 25% 15%;
+  --card-foreground: 36 100% 97%;
   --card-border: 217 25% 25%;
-  --popover: 219 29% 17%;
-  --popover-foreground: 43 58% 97%;
+  --popover: 219 25% 15%;
+  --popover-foreground: 36 100% 97%;
   --popover-border: 217 25% 25%;
-  --primary: 197 76% 53%;
-  --primary-foreground: 219 33% 12%;
-  --secondary: 47 95% 66%;
-  --secondary-foreground: 219 33% 12%;
+  --primary: 179 70% 40%;
+  --primary-foreground: 219 33% 10%;
+  --secondary: 179 70% 40%;
+  --secondary-foreground: 219 33% 10%;
   --muted: 217 25% 25%;
-  --muted-foreground: 217 18% 70%;
-  --accent: 159 45% 51%;
-  --accent-foreground: 219 33% 12%;
+  --muted-foreground: 217 18% 60%;
+  --accent: 179 70% 40%;
+  --accent-foreground: 219 33% 10%;
   --destructive: 10 74% 62%;
-  --destructive-foreground: 219 33% 12%;
+  --destructive-foreground: 219 33% 10%;
   --app-font-sans: 'DM Sans', sans-serif;
   --app-font-serif: 'Fraunces', Georgia, serif;
   --app-font-mono: ui-monospace, monospace;
@@ -252,7 +326,9 @@
 /* Page & Section Backgrounds */
 .bg-page { background-color: var(--bg-page); }
 .bg-section-mint { background-color: var(--bg-section-mint); }
+.bg-section-sky { background-color: var(--bg-section-sky); }
 .bg-section-peach { background-color: var(--bg-section-peach); }
+.bg-section-lavender { background-color: var(--bg-section-lavender); }
 .bg-section-hero { background-color: var(--bg-section-hero); }
 .bg-section-dark { background-color: var(--bg-section-dark); }
 .bg-card { background-color: var(--bg-card); }
@@ -267,15 +343,28 @@
 /* Brand Accent Colors */
 .text-brand-teal { color: var(--brand-teal); }
 .text-brand-coral { color: var(--brand-coral); }
-.text-brand-gold { color: var(--brand-gold); }
+.text-brand-yellow { color: var(--brand-yellow); }
+.text-brand-navy { color: var(--brand-navy); }
 .bg-brand-teal { background-color: var(--brand-teal); }
 .bg-brand-coral { background-color: var(--brand-coral); }
+.bg-brand-yellow { background-color: var(--brand-yellow); }
 
 /* Program Card Backgrounds (Theme-Aware) */
 .bg-card-playgroup { background-color: var(--card-playgroup); }
 .bg-card-prekg { background-color: var(--card-prekg); }
 .bg-card-lkg { background-color: var(--card-lkg); }
 .bg-card-ukg { background-color: var(--card-ukg); }
+
+/* Activity Card Backgrounds */
+.bg-activity-art { background-color: var(--activity-art); }
+.bg-activity-storytelling { background-color: var(--activity-storytelling); }
+.bg-activity-music { background-color: var(--activity-music); }
+.bg-activity-cognitive { background-color: var(--activity-cognitive); }
+.bg-activity-nature { background-color: var(--activity-nature); }
+.bg-activity-physical { background-color: var(--activity-physical); }
+.bg-activity-literacy { background-color: var(--activity-literacy); }
+.bg-activity-numeracy { background-color: var(--activity-numeracy); }
+.bg-activity-social { background-color: var(--activity-social); }
 
 /* Campus Card Backgrounds (Theme-Aware) */
 .bg-campus-classrooms { background-color: var(--campus-classrooms); }
@@ -284,6 +373,17 @@
 .bg-campus-outdoor { background-color: var(--campus-outdoor); }
 .bg-campus-playzone { background-color: var(--campus-playzone); }
 .bg-campus-music { background-color: var(--campus-music); }
+
+/* Event Backgrounds */
+.bg-event-annual { background-color: var(--event-annual); }
+.bg-event-artists { background-color: var(--event-artists); }
+.bg-event-sports { background-color: var(--event-sports); }
+
+/* Icon Colors */
+.text-icon-map { color: var(--icon-map); }
+.text-icon-phone { color: var(--icon-phone); }
+.text-icon-email { color: var(--icon-email); }
+.text-icon-clock { color: var(--icon-clock); }
 
 /* Border Colors */
 .border-light { border-color: var(--border-light); }
@@ -295,8 +395,19 @@
   color: var(--btn-primary-text);
 }
 
-.btn-cta {
-  background-color: var(--btn-cta);
+.btn-primary:hover {
+  background-color: var(--btn-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--btn-secondary);
+  color: var(--btn-secondary-text);
+  border: 1px solid var(--border-light);
+}
+
+.btn-accent {
+  background-color: var(--btn-accent);
+  color: var(--btn-accent-text);
 }
 
 /* Input/Form */

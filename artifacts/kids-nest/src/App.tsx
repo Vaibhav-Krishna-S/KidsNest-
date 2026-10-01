@@ -489,10 +489,42 @@ function GrowthSection() {
 }
 
 function CampusSection() {
-  const spaces = [['Classrooms', 'Bright, calm spaces made for curious hands.'], ['Activity areas', 'Room to paint, build, sing and make a happy mess.'], ['Reading corner', 'A soft landing for stories, questions and quiet wonder.'], ['Outdoor play area', 'Fresh air, big movement and room to notice nature.'], ['Play zone', 'Open-ended play that gives imagination the lead.'], ['Music & activity space', 'A place for rhythm, expression and growing confidence.']];
-  return <section id="campus" className="section-pad bg-section-mint"><div className="container-wide"><SectionHeading eyebrow="Come see the nest" title="A campus designed for little discoveries" text="From the first hello to the final story, our spaces are warm, inviting and thoughtfully arranged around children." /><div className="mt-11 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{spaces.map(([title, description], index) => <div key={title} className="group overflow-hidden rounded-[22px] border border-light bg-card/80" data-testid={`campus-card-${index}`}><div className={`relative h-32 ${['bg-[var(--campus-classrooms)]', 'bg-[var(--campus-activity)]', 'bg-[var(--campus-reading)]', 'bg-[var(--campus-outdoor)]', 'bg-[var(--campus-playzone)]', 'bg-[var(--campus-music)]'][index]}`}><div className="absolute bottom-0 left-[15%] h-20 w-14 rounded-t-[34px] bg-card/65" /><div className="absolute bottom-0 left-[42%] h-28 w-20 rounded-t-[40px] bg-brand-coral/70" /><div className="absolute right-[17%] top-[22%] size-11 rounded-full border-4 border-card/60" /></div><div className="p-5"><h3 className="font-display text-xl text-primary">{title}</h3><p className="mt-1 text-sm leading-6 text-tertiary">{description}</p></div></div>)}</div><div className="mt-8 text-center"><button onClick={() => scrollToId('gallery')} className="inline-flex items-center rounded-full bg-primary px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-1 hover:bg-[#304a63]" data-testid="button-virtual-peek">Take a virtual peek <CirclePlay className="ml-2.5 size-4" /></button></div></div></section>;
+  const spaces = [
+    { title: 'Classrooms', description: 'Bright, calm spaces made for curious hands.', photo: '/gallery/campus-classroom.jpeg' },
+    { title: 'Activity areas', description: 'Room to paint, build, sing and make a happy mess.', photo: '/gallery/campus-activity.jpeg' },
+    { title: 'Reading corner', description: 'A soft landing for stories, questions and quiet wonder.', photo: '/gallery/campus-reading.jpeg' },
+    { title: 'Outdoor play area', description: 'Fresh air, big movement and room to notice nature.', photo: '/gallery/campus-outdoor.jpeg' },
+    { title: 'Play zone', description: 'Open-ended play that gives imagination the lead.', photo: '/gallery/campus-playzone.jpeg' },
+    { title: 'Music & activity space', description: 'A place for rhythm, expression and growing confidence.', photo: '/gallery/campus-music.jpeg' },
+  ];
+  return (
+    <section id="campus" className="section-pad bg-[#fdf5f0]">
+      <div className="container-wide">
+        <SectionHeading eyebrow="Come see the nest" title="A campus designed for little discoveries" text="From the first hello to the final story, our spaces are warm, inviting and thoughtfully arranged around children." />
+        <div className="mt-11 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {spaces.map(({ title, description, photo }, index) => (
+            <div key={title} className="group relative overflow-hidden rounded-[22px]" data-testid={`campus-card-${index}`}>
+              <div className="relative aspect-[4/3] overflow-hidden bg-[#3c2828]">
+                {photo
+                  ? <img src={photo} alt={title} className="absolute inset-0 h-full w-full object-cover" />
+                  : <div className="flex h-full items-center justify-center text-sm font-bold text-[#c8a898]">Photo coming soon</div>
+                }
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="font-display text-xl text-white">{title}</h3>
+                  <p className="mt-1 text-sm leading-5 text-white/85">{description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 text-center">
+          <button onClick={() => scrollToId('gallery')} className="inline-flex items-center rounded-full bg-[#3c2828] px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-1 hover:bg-[#5a3a3a]" data-testid="button-virtual-peek">Take a virtual peek <CirclePlay className="ml-2.5 size-4" /></button>
+        </div>
+      </div>
+    </section>
+  );
 }
-
 function FAQSection() {
   const [open, setOpen] = useState<number | null>(0);
   return <section id="faqs" className="section-pad bg-section-peach"><div className="container-wide"><SectionHeading centered eyebrow="A little clarity" title="Questions parents often ask" text="Still wondering about something? We would love to talk it through." /><div className="mx-auto mt-11 max-w-3xl divide-y divide-light rounded-[26px] border border-light bg-page px-5 sm:px-8">{faqs.map(([question, answer], index) => <div key={question}><button onClick={() => setOpen(open === index ? null : index)} className="flex w-full items-center justify-between gap-4 py-5 text-left" aria-expanded={open === index} data-testid={`button-faq-${index}`}><span className="font-bold text-primary">{question}</span><ChevronDown className={`size-5 shrink-0 text-brand-teal transition-transform ${open === index ? 'rotate-180' : ''}`} /></button>{open === index && <div className="pb-5 pr-8 text-sm leading-7 text-tertiary">{answer}</div>}</div>)}</div></div></section>;

@@ -155,7 +155,7 @@ function HeroIllustration() {
                 <div className="grid size-16 place-items-center rounded-full bg-white shadow-lg transition-transform group-hover:scale-110">
                   <CirclePlay className="size-8 text-[var(--brand-teal)] fill-[var(--brand-teal)]" />
                 </div>
-                <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-[#203047] shadow-md transition-opacity group-hover:opacity-100">Hear our Story</span>
+                <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-[#203047] shadow-md transition-opacity group-hover:opacity-100">Click to Hear Our Story</span>
               </div>
             </button>
           )}

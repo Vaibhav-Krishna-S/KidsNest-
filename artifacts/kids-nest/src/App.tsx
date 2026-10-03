@@ -197,34 +197,14 @@ function FounderSection() {
     <section id="founder" className="section-pad bg-section-peach">
       <div className="container-wide">
         <div className="grid items-center gap-14 lg:grid-cols-[1fr_1.1fr]">
-          {/* Founder illustration card */}
+          {/* Founder photo card */}
           <div className="relative mx-auto w-full max-w-[420px] reveal">
             <div className="absolute -left-4 -top-4 size-48 rounded-full bg-[var(--brand-yellow)]/20 blur-2xl" />
             <div className="absolute -bottom-4 -right-4 size-48 rounded-full bg-[var(--brand-teal)]/15 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[36px] border-4 border-card bg-section-mint shadow-[0_24px_60px_rgba(32,48,71,.14)]">
-              {/* Illustrated founder avatar */}
-              <div className="flex h-72 items-end justify-center bg-gradient-to-b from-[var(--brand-mint)]/60 to-[var(--brand-mint)]/30">
-                <div className="relative h-60 w-48">
-                  {/* Body */}
-                  <div className="absolute bottom-0 left-1/2 h-40 w-36 -translate-x-1/2 rounded-t-[60px] bg-[var(--brand-teal)]" />
-                  {/* Head */}
-                  <div className="absolute left-1/2 top-4 size-28 -translate-x-1/2 rounded-full bg-[#c98c6d]" />
-                  {/* Hair */}
-                  <div className="absolute left-1/2 top-3 h-16 w-28 -translate-x-1/2 rounded-t-full bg-[#2d1a0e]" />
-                  {/* Eyes */}
-                  <div className="absolute left-[calc(50%-18px)] top-[52px] size-3 rounded-full bg-[#203047]" />
-                  <div className="absolute left-[calc(50%+6px)] top-[52px] size-3 rounded-full bg-[#203047]" />
-                  {/* Smile */}
-                  <div className="absolute left-1/2 top-[70px] h-2 w-10 -translate-x-1/2 rounded-full bg-[var(--brand-coral)]" />
-                  {/* Arms */}
-                  <div className="absolute bottom-20 left-[-8px] h-8 w-12 rotate-[20deg] rounded-full bg-[var(--brand-teal)]" />
-                  <div className="absolute bottom-20 right-[-8px] h-8 w-12 rotate-[-20deg] rounded-full bg-[var(--brand-teal)]" />
-                  {/* Saree accent */}
-                  <div className="absolute bottom-0 left-1/2 h-10 w-36 -translate-x-1/2 rounded-t-[20px] bg-[var(--brand-coral)]/40" />
-                </div>
-              </div>
+            <div className="relative overflow-hidden rounded-[36px] border-4 border-card shadow-[0_24px_60px_rgba(32,48,71,.14)]">
+              <img src="/ratna-devi.jpeg" alt="Mrs. Ratna Devi, Founder of Kidsnest School" className="w-full object-cover" />
               <div className="bg-card p-6 text-center">
-                <h3 className="font-display text-2xl text-primary">Mrs. Retna Devi</h3>
+                <h3 className="font-display text-2xl text-primary">Mrs. Ratna Devi</h3>
                 <p className="mt-1 text-sm font-bold text-brand-teal">Founder, Kidsnest School</p>
                 <p className="mt-3 text-xs leading-6 text-tertiary">A vision for a warm, safe, and engaging environment where children can learn, explore, and thrive.</p>
               </div>

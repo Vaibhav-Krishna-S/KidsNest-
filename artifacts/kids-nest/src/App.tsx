@@ -126,7 +126,7 @@ function HeroIllustration() {
         <div className="relative h-full overflow-hidden rounded-[29px] bg-black/5 group cursor-pointer">
           <video
             ref={videoRef}
-            src="/videos/kids-nest-intro.mp4"
+            src="/kidsnest-promo.mp4"
             poster="/gallery/hero.jpeg"
             className="absolute inset-0 h-full w-full object-cover"
             controls={isPlaying}
@@ -134,19 +134,19 @@ function HeroIllustration() {
             loop
             playsInline
             preload="metadata"
-            aria-label="Kids Nest school introduction video"
+            aria-label="Kids Nest school promo video"
           />
           {!isPlaying && (
             <button
               onClick={handlePlayClick}
               className="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 hover:bg-black/30 group-hover:bg-black/30"
-              aria-label="Play Kids Nest introduction video"
+              aria-label="Play Kids Nest promo video"
             >
               <div className="flex flex-col items-center gap-3">
                 <div className="grid size-16 place-items-center rounded-full bg-white shadow-lg transition-transform group-hover:scale-110">
                   <CirclePlay className="size-8 text-[var(--brand-teal)] fill-[var(--brand-teal)]" />
                 </div>
-                <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-[#203047] shadow-md transition-opacity group-hover:opacity-100">Click to Hear Our Story</span>
+                <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-[#203047] shadow-md transition-opacity group-hover:opacity-100">Watch Our Promo</span>
               </div>
             </button>
           )}

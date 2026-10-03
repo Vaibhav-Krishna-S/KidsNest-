@@ -587,8 +587,8 @@ const GALLERY_FILES_BY_CATEGORY: Record<string, readonly string[]> = {
     '/new-gallery/talent-show/ts-14.jpeg',
   ],
   'world-photography-day': [
-    '/new-gallery/world-photography-day/image_1.jpeg',
-    '/new-gallery/world-photography-day/image_2.jpeg',
+    '/gallery/campus-playzone.jpeg',
+    '/image.png',
     '/new-gallery/world-photography-day/wpd-01.jpeg',
     '/new-gallery/world-photography-day/wpd-04.jpeg',
     '/new-gallery/world-photography-day/wpd-05.jpeg',
@@ -821,9 +821,9 @@ function FacilitySection() {
   const spaces = [
     { title: 'Classrooms', description: 'Bright, calm spaces made for curious hands.', photo: '/gallery/campus-classroom.jpeg' },
     { title: 'Activity areas', description: 'Room to paint, build, sing and make a happy mess.', photo: '/gallery/campus-activity.jpeg' },
-    { title: 'Reading corner', description: 'A soft landing for stories, questions and quiet wonder.', photo: '/gallery/campus-reading.jpeg' },
+    { title: 'Reading corner', description: 'A soft landing for stories, questions and quiet wonder.', photo: '/gallery/campus-reading-corner.jpeg' },
     { title: 'Outdoor play area', description: 'Fresh air, big movement and room to notice nature.', photo: '/gallery/campus-outdoor.jpeg' },
-    { title: 'Play zone', description: 'Open-ended play that gives imagination the lead.', photo: '/gallery/campus-playzone.jpeg' },
+    { title: 'Play zone', description: 'Open-ended play that gives imagination the lead.', photo: '/gallery/campus-playzone.png' },
     { title: 'Music & activity space', description: 'A place for rhythm, expression and growing confidence.', photo: '/gallery/campus-music.jpeg' },
   ];
   return (

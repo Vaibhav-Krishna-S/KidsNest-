@@ -37,7 +37,7 @@ const faqs = [
   ['How do I apply for admission?', 'Start by sending an enquiry or booking a school visit. We will share availability, answer your questions and walk you through the simple next steps.'],
   ['Can parents visit the campus?', 'Absolutely. A visit is the best way to experience the nest. Book a school visit and our team will arrange a convenient time to show you around.'],
   ['What activities are included?', 'Children explore art, stories, music, rhymes, cognitive games, nature, physical play, early literacy, early numeracy and social skills through hands-on experiences.'],
-  ['How does Kids Nest ensure child safety?', 'Safety is woven into our environment, routines and relationships. We maintain child-friendly spaces, mindful supervision and clear communication with families.'],
+  ['How does Kids Nest ensure child safety?', 'Safety is our top priority. Kids Nest maintains a secure, child-friendly environment with multiple layers of protection: CCTV surveillance throughout the campus for continuous monitoring, experienced and trained staff members with expertise in early childhood care, child-friendly furniture designed for safety and comfort, and dedicated security personnel on-site. We combine these physical safeguards with mindful supervision, clear routines, and regular communication with families to create a nurturing space where children can thrive with confidence.'],
   ['Do you provide transportation?', 'Transportation details are currently being finalised. Contact us and we will share the latest availability for your area.'],
   ['How can parents communicate with teachers?', 'Our educators make room for regular parent communication, sharing observations and celebrating each child\'s progress together.'],
 ];

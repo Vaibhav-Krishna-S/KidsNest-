@@ -202,9 +202,9 @@ function FounderSection() {
             <div className="absolute -left-4 -top-4 size-48 rounded-full bg-[var(--brand-yellow)]/20 blur-2xl" />
             <div className="absolute -bottom-4 -right-4 size-48 rounded-full bg-[var(--brand-teal)]/15 blur-2xl" />
             <div className="relative overflow-hidden rounded-[36px] border-4 border-card shadow-[0_24px_60px_rgba(32,48,71,.14)]">
-              <img src="/ratna-devi.jpeg" alt="Mrs. Ratna Devi, Founder of Kidsnest School" className="w-full object-cover" />
+              <img src="/ratna-devi.jpeg" alt="Mrs. Retna Devi, Founder of Kidsnest School" className="w-full object-cover" />
               <div className="bg-card p-6 text-center">
-                <h3 className="font-display text-2xl text-primary">Mrs. Ratna Devi</h3>
+                <h3 className="font-display text-2xl text-primary">Mrs. Retna Devi</h3>
                 <p className="mt-1 text-sm font-bold text-brand-teal">Founder, Kidsnest School</p>
                 <p className="mt-3 text-xs leading-6 text-tertiary">A vision for a warm, safe, and engaging environment where children can learn, explore, and thrive.</p>
               </div>

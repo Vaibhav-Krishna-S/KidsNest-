@@ -19,10 +19,10 @@ import NotFound from '@/pages/not-found';
 const queryClient = new QueryClient();
 
 const programs = [
-  { title: 'Play Group', age: '2-3 years', description: 'A joyful first step into a world of play, friendship and exploration - building social skills and confidence through warm, guided interaction.', color: 'bg-[var(--card-playgroup)]', icon: Leaf },
-  { title: 'Pre-KG', age: '3-4 years', description: "Encouraging communication, creativity, and early learning through play-based activities that nurture every child's natural curiosity.", color: 'bg-[var(--card-prekg)]', icon: Sun },
-  { title: 'LKG', age: '4-5 years', description: 'Building foundational literacy, numeracy, and social skills through engaging hands-on activities, stories, music, and creative arts.', color: 'bg-[var(--card-lkg)]', icon: Sparkles },
-  { title: 'UKG', age: '5-6 years', description: 'Preparing confident, curious, and capable young learners for their next big step - with strong values, independence, and a love for learning.', color: 'bg-[var(--card-ukg)]', icon: Compass },
+  { title: 'Play Group', age: '2-3 years', description: 'A warm, engaging, and nurturing start that encourages curiosity and joyful learning.', color: 'bg-[var(--card-playgroup)]', icon: Leaf },
+  { title: 'Pre-KG', age: '3-4 years', description: 'Meaningful experiences that encourage creativity, confidence, and communication.', color: 'bg-[var(--card-prekg)]', icon: Sun },
+  { title: 'LKG', age: '4-5 years', description: 'A nurturing environment for self-expression, exploration, and holistic development.', color: 'bg-[var(--card-lkg)]', icon: Sparkles },
+  { title: 'UKG', age: '5-6 years', description: 'A joyful learning environment that values each child\'s individual growth and care.', color: 'bg-[var(--card-ukg)]', icon: Compass },
 ];
 const teachers = [
   { name: 'Ms. Nivetha', role: 'Early Childhood Educator', detail: 'B.Ed · Early Years', area: 'Language & storytelling', quote: 'Every child learns differently. Our job is to help them discover how they shine.', initials: 'N', tint: 'bg-[var(--bg-section-peach)]' },
@@ -30,17 +30,8 @@ const teachers = [
   { name: 'Ms. Kavya', role: 'Movement & Music Guide', detail: 'B.A. Psychology', area: 'Expression & wellbeing', quote: 'When children feel safe to be themselves, learning starts to feel like joy.', initials: 'K', tint: 'bg-[var(--bg-section-lavender)]' },
 ];
 
-const gallery = [
-  { label: 'Classroom Activities', tone: 'sky', caption: 'Curious hands at work', photo: '/gallery/gallery-1.jpeg' },
-  { label: 'Art & Craft', tone: 'coral', caption: 'Little hands, big creativity', photo: '/gallery/gallery-2.jpeg' },
-  { label: 'Outdoor Play', tone: 'mint', caption: 'Room to run and wonder', photo: '/gallery/gallery-3.jpeg' },
-  { label: 'Celebrations', tone: 'yellow', caption: 'Every moment worth celebrating', photo: '/gallery/gallery-4.jpeg' },
-  { label: 'Creative Play', tone: 'lavender', caption: 'Imagination has no limits', photo: '/gallery/gallery-5.jpeg' },
-  { label: 'Active Play', tone: 'peach', caption: 'Energy, joy and lots of fun', photo: '/gallery/gallery-6.jpeg' },
-];
-
 const faqs = [
-  ['What age groups does Kids Nest accept?', 'Kids Nest welcomes little learners from approximately 1.5 to 5.5 years across Play Group, Pre-KG, LKG and UKG. Our team is happy to guide you to the right starting point.'],
+  ['What age groups does Kids Nest accept?', 'Infant care is available from 12 months. Our school programs are Play Group (2-3 years), Pre-KG (3-4 years), LKG (4-5 years), and UKG (5-6 years).'],
   ['What programs are available?', 'Our early years programs are designed around each stage of development: Play Group, Pre-KG, LKG and UKG. Every program blends play, movement, conversation, creativity and gentle academic foundations.'],
   ['What are the school timings?', 'School office hours are 9:00 AM to 5:00 PM. Daycare is available from 8:00 AM to 6:00 PM. Please contact our admissions team for program-specific schedules.'],
   ['How do I apply for admission?', 'Start by sending an enquiry or booking a school visit. We will share availability, answer your questions and walk you through the simple next steps.'],
@@ -171,7 +162,7 @@ function SectionHeading({ eyebrow, title, text, centered = false }: { eyebrow: s
 }
 
 function StorySection() {
-  const stats = [['12+', 'Months & above welcome'], ['Small', 'Class sizes for individual care'], ['Holistic', 'Child development focus'], ['10+', 'Years of nurturing childhoods']];
+  const stats = [['12+', 'Months & above welcome'], ['Small', 'Class sizes for individual care'], ['Holistic', 'Child development focus'], ['4', 'Programs offered']];
   return <section id="story" className="section-pad bg-page">
     <div className="container-wide grid items-stretch gap-16 lg:grid-cols-[.86fr_1.14fr]">
       <div className="relative self-stretch reveal">
@@ -186,11 +177,11 @@ function StorySection() {
         <div className="mt-8 grid gap-5">
           <div className="rounded-2xl border border-light bg-card/70 p-5">
             <span className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[.12em] text-brand-teal"><Lightbulb className="size-4" /> Our Vision</span>
-            <p className="text-sm leading-7 text-secondary">To develop confident, compassionate, and independent young learners by providing a nurturing and stimulating environment that serves as a strong foundation for every child to blossom at their own pace - fostering curiosity, creativity, self-expression, and a lifelong love for learning.</p>
+            <p className="text-sm leading-7 text-secondary">At Kidsnest School, our vision is to develop confident, compassionate, and independent young learners by providing a nurturing and stimulating environment that serves as a strong foundation for every child to blossom at his or her own pace. We strive to create meaningful learning experiences that encourage curiosity, creativity, self-expression, and a lifelong love for learning, while helping children grow into responsible and caring individuals.</p>
           </div>
           <div className="rounded-2xl border border-light bg-card/70 p-5">
             <span className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[.12em] text-brand-coral"><Target className="size-4" /> Our Mission</span>
-            <p className="text-sm leading-7 text-secondary">To create a joyful, safe, and nurturing environment where every child feels valued, confident, and inspired to learn - growing intellectually, emotionally, socially, and creatively through meaningful play-based learning, innovative activities, and caring guidance.</p>
+            <p className="text-sm leading-7 text-secondary">At Kidsnest School, our mission is to create a joyful, safe, and nurturing environment where every child feels valued, confident, and inspired to learn. We believe that early childhood is the foundation for lifelong success, and we are committed to helping children grow intellectually, emotionally, socially, and creatively through meaningful learning experiences. Our goal is to foster curiosity, kindness, independence, and strong values while encouraging every child to explore their unique talents and abilities. Through play-based learning, innovative activities, and caring guidance, we strive to build happy learners and confident individuals who are prepared for the future. We also believe in building a strong partnership with parents to ensure the holistic development and well-being of every child entrusted to our care.</p>
           </div>
         </div>
         <div className="mt-9 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -235,7 +226,7 @@ function FounderSection() {
               <div className="bg-card p-6 text-center">
                 <h3 className="font-display text-2xl text-primary">Mrs. Retna Devi</h3>
                 <p className="mt-1 text-sm font-bold text-brand-teal">Founder, Kidsnest School</p>
-                <p className="mt-3 text-xs italic leading-6 text-tertiary">"Every child deserves a warm, safe space to grow, explore and discover the joy of learning."</p>
+                <p className="mt-3 text-xs leading-6 text-tertiary">A vision for a warm, safe, and engaging environment where children can learn, explore, and thrive.</p>
               </div>
             </div>
           </div>
@@ -277,10 +268,10 @@ function ProgramsSection() {
     <div className="container-wide">
       <div className="flex flex-wrap items-end justify-between gap-7"><SectionHeading eyebrow="The early years" title="A program for every first step" text="Thoughtfully paced programs designed around each stage of development - blending play, movement, creativity, early literacy, and gentle academic foundations." /><span className="mb-2 hidden rounded-full border border-light bg-card/60 px-4 py-2 text-xs font-bold text-secondary md:inline-flex"><span className="mr-2 size-2 rounded-full bg-brand-coral" />Admissions open for the coming term</span></div>
       <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        {programs.map(({ title, age, description, color, icon: Icon }, index) => <article key={title} className={`group relative overflow-hidden rounded-[28px] ${color} p-6 transition-transform duration-300 hover:-translate-y-2`} data-testid={`program-card-${index}`}>
-          <div className="mb-14 flex items-start justify-between"><span className="grid size-12 place-items-center rounded-2xl bg-card/70 text-primary"><Icon className="size-6" /></span><span className="rounded-full bg-card/65 px-3 py-1 text-[.63rem] font-bold text-secondary">{age}</span></div>
-          <h3 className="font-display text-2xl tracking-[-.04em] text-primary">{title}</h3><p className="mt-2 min-h-[65px] text-sm leading-6 text-secondary">{description}</p>
-          <button onClick={() => scrollToId('contact')} className="mt-5 inline-flex items-center text-xs font-bold text-primary underline decoration-primary/25 underline-offset-4 transition-colors hover:text-brand-teal" data-testid={`button-program-${index}`}>Learn more <ArrowUpRight className="ml-1.5 size-3.5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></button>
+        {programs.map(({ title, age, description, color, icon: Icon }, index) => <article key={title} className={`group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-white/20 ${color} p-7 shadow-[0_10px_20px_rgba(32,48,71,0.08)] transition-transform duration-300 hover:-translate-y-2 hover:shadow-[0_18px_30px_rgba(32,48,71,0.12)]`} data-testid={`program-card-${index}`}>
+          <div className="mb-10 flex items-start justify-between"><span className="grid size-12 place-items-center rounded-2xl bg-card/70 text-primary shadow-sm"><Icon className="size-6" /></span><span className="rounded-full border border-primary/10 bg-card/70 px-3 py-1 text-[.68rem] font-bold text-secondary">{age}</span></div>
+          <h3 className="font-display text-[1.4rem] font-semibold leading-tight text-primary">{title}</h3><p className="mt-2 min-h-[72px] flex-1 text-sm leading-6 text-secondary">{description}</p>
+          <button onClick={() => scrollToId('contact')} className="mt-5 inline-flex items-center self-start text-xs font-bold text-primary underline decoration-primary/25 underline-offset-4 transition-colors hover:text-brand-teal" data-testid={`button-program-${index}`}>Learn more <ArrowUpRight className="ml-1.5 size-3.5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></button>
           <div className="absolute -bottom-10 -right-9 size-28 rounded-full border-[14px] border-card/25" />
         </article>)}
       </div>
@@ -291,10 +282,10 @@ function ProgramsSection() {
 
 function LittleNestSection({ onEnquire }: { onEnquire: () => void }) {
   const services = [
-    { icon: Baby, title: 'Infant Care', description: 'Gentle, attentive care for babies in a warm and nurturing environment.', color: 'bg-card-playgroup', iconColor: 'text-brand-teal' },
-    { icon: Sun, title: 'Full-Day Daycare', description: 'Reliable, loving care throughout the working day so parents can work with peace of mind.', color: 'bg-card-prekg', iconColor: 'text-brand-gold' },
-    { icon: School, title: 'After-School Care', description: 'A safe, familiar place for children to stay and unwind after school hours.', color: 'bg-card-lkg', iconColor: 'text-brand-coral' },
-    { icon: Moon, title: 'After-School Activities', description: 'Enriching activities children can join after school to explore, create and grow.', color: 'bg-card-ukg', iconColor: 'text-brand-purple' },
+    { icon: Baby, title: 'Infant Care', description: 'Care for babies', color: 'bg-card-playgroup', iconColor: 'text-brand-teal' },
+    { icon: Sun, title: 'Full-Day Daycare', description: 'Care throughout the working day', color: 'bg-card-prekg', iconColor: 'text-brand-gold' },
+    { icon: School, title: 'After-School Care', description: 'A place to stay after school', color: 'bg-card-lkg', iconColor: 'text-brand-coral' },
+    { icon: Moon, title: 'After-School Activities', description: 'Activities children can join after school', color: 'bg-card-ukg', iconColor: 'text-brand-purple' },
   ];
   return (
     <section id="little-nest" className="section-pad bg-page">
@@ -340,7 +331,7 @@ function WhySection() {
     {
       icon: Users,
       title: 'Small Class Sizes',
-      description: 'We maintain small class sizes to ensure every child receives individual attention, care, and guidance throughout their learning journey.',
+      description: 'We maintain small class sizes to ensure every child receives individual attention, care, and guidance.',
       color: 'bg-card-playgroup',
       iconColor: 'text-brand-teal',
     },
@@ -354,14 +345,14 @@ function WhySection() {
     {
       icon: Sparkles,
       title: 'Beyond the Classroom',
-      description: 'Learning at Kidsnest goes beyond textbooks. Through hands-on activities, celebrations, creative arts, music, movement, storytelling, and experiential learning, children explore the world with joy.',
+      description: 'Learning at Kidsnest goes beyond textbooks and classrooms. Through hands-on activities, celebrations, creative arts, music, movement, storytelling, games, and experiential learning, children explore the world around them with joy and curiosity.',
       color: 'bg-card-lkg',
       iconColor: 'text-brand-coral',
     },
     {
       icon: Lightbulb,
       title: 'Dynamic & Passionate Staff',
-      description: 'Our dedicated educators are passionate about early childhood learning and committed to creating a positive, inspiring atmosphere where every child feels safe, valued, and encouraged to shine.',
+      description: 'Our dedicated educators are passionate about early childhood learning and committed to creating a positive and inspiring atmosphere where every child feels safe, valued, and encouraged to shine. We strive to make learning a happy journey filled with discovery, friendship, and lifelong memories.',
       color: 'bg-card-ukg',
       iconColor: 'text-brand-teal',
     },
@@ -403,15 +394,374 @@ function WhySection() {
   );
 }
 
-function GallerySection({ onOpen }: { onOpen: (index: number) => void }) {
-  return <section id="activities" className="section-pad bg-section-mint"><div className="container-wide"><div className="flex flex-wrap items-end justify-between gap-6"><SectionHeading eyebrow="A window into our days" title="Little moments. Big memories." text="Every day is an adventure - and the ordinary moments are often the ones families remember most." /><div className="mb-1 flex items-center gap-2 text-xs font-bold text-secondary"><Eye className="size-4 text-brand-teal" /> Tap a story to take a closer look</div></div>
-    <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3">{gallery.map((item, index) => <button onClick={() => onOpen(index)} key={item.label} className={`group relative overflow-hidden rounded-[24px] text-left ${index === 5 ? 'bg-[#1a2530]' : ''} ${index === 1 || index === 4 ? 'aspect-[.9]' : 'aspect-[1.1]'}`} data-testid={`button-gallery-${index}`} aria-label={`Open ${item.label} gallery image`}><img src={item.photo} alt={item.label} className={`absolute inset-0 h-full w-full transition-transform duration-500 group-hover:scale-105 ${index === 5 ? 'object-contain' : 'object-cover'}`} /><div className="absolute inset-0 bg-gradient-to-t from-primary/65 via-transparent to-transparent" /><span className="absolute bottom-5 left-5 right-5 text-white"><small className="block text-[.62rem] font-bold uppercase tracking-[.13em] text-white/75">{item.label}</small><strong className="mt-1 block font-display text-lg leading-tight">{item.caption}</strong></span><span className="absolute right-4 top-4 grid size-9 place-items-center rounded-full bg-white/85 text-primary opacity-0 transition-opacity group-hover:opacity-100"><ArrowUpRight className="size-4" /></span></button>)}</div>
+const activities = [
+  { label: 'Classroom Activities', tone: 'sky', caption: 'Curious hands at work', photo: '/gallery/gallery-1.jpeg' },
+  { label: 'Art & Craft', tone: 'coral', caption: 'Little hands, big creativity', photo: '/gallery/gallery-2.jpeg' },
+  { label: 'Outdoor Play', tone: 'mint', caption: 'Room to run and wonder', photo: '/gallery/gallery-3.jpeg' },
+  { label: 'Celebrations', tone: 'yellow', caption: 'Every moment worth celebrating', photo: '/gallery/gallery-4.jpeg' },
+  { label: 'Creative Play', tone: 'lavender', caption: 'Imagination has no limits', photo: '/gallery/gallery-5.jpeg' },
+  { label: 'Active Play', tone: 'peach', caption: 'Energy, joy and lots of fun', photo: '/gallery/gallery-6.jpeg' },
+];
+
+function ActivitiesSection() {
+  return <section id="activities" className="section-pad bg-section-mint"><div className="container-wide"><div className="flex flex-wrap items-end justify-between gap-6"><SectionHeading eyebrow="A window into our days" title="Every Day Is an Adventure." text="The best kind of learning feels a lot like play." /><div className="mb-1 flex items-center gap-2 text-xs font-bold text-secondary"><Eye className="size-4 text-brand-teal" /> Tap a story to take a closer look</div></div>
+    <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3">{activities.map((item, index) => <div key={item.label} className={`group relative overflow-hidden rounded-[24px] text-left ${index === 5 ? 'bg-[#1a2530]' : ''} ${index === 1 || index === 4 ? 'aspect-[.9]' : 'aspect-[1.1]'}`} data-testid={`button-gallery-${index}`}><img src={item.photo} alt={item.label} className={`absolute inset-0 h-full w-full transition-transform duration-500 group-hover:scale-105 ${index === 5 ? 'object-contain' : 'object-cover'}`} /><div className="absolute inset-0 bg-gradient-to-t from-primary/65 via-transparent to-transparent" /><span className="absolute bottom-5 left-5 right-5 text-white"><small className="block text-[.62rem] font-bold uppercase tracking-[.13em] text-white/75">{item.label}</small><strong className="mt-1 block font-display text-lg leading-tight">{item.caption}</strong></span></div>)}</div>
   </div></section>;
 }
 
+type GalleryItem = { src: string; category: string; type: 'photo' | 'video' };
+
+const TABS = [
+  { key: 'all', label: 'All' },
+  { key: 'talent-show', label: 'Talent Show' },
+  { key: 'childrens-day', label: "Children's Day" },
+  { key: 'farewell-day', label: 'Farewell Day' },
+  { key: 'world-photography-day', label: 'World Photography Day' },
+  { key: 'mango-day', label: 'Mango Day' },
+  { key: 'field-trip', label: 'Field Trip' },
+  { key: 'world-thrift-day', label: 'World Thrift Day' },
+  { key: 'our-kids', label: 'Our Kids' },
+  { key: 'our-teachers', label: 'Our Teachers' },
+  { key: 'our-campus', label: 'Our Campus' },
+  { key: 'other-memories', label: 'Other Memories' },
+];
+
+const GALLERY_FILES_BY_CATEGORY: Record<string, readonly string[]> = {
+  all: [
+    '/new-gallery/all/all-01.jpeg',
+    '/new-gallery/all/all-02.jpeg',
+    '/new-gallery/all/all-03.jpeg',
+    '/new-gallery/all/all-04.jpeg',
+    '/new-gallery/all/all-05.jpeg',
+    '/new-gallery/all/all-06.jpeg',
+    '/new-gallery/all/all-08.jpeg',
+    '/new-gallery/all/all-09.jpeg',
+    '/new-gallery/all/all-10.jpeg',
+    '/new-gallery/all/all-11.jpeg',
+    '/new-gallery/all/all-13.jpeg',
+    '/new-gallery/all/all-14.jpeg',
+  ],
+  'childrens-day': [
+    '/new-gallery/childrens-day/cd-01.jpeg',
+    '/new-gallery/childrens-day/cd-02.jpeg',
+    '/new-gallery/childrens-day/cd-03.jpeg',
+  ],
+  'farewell-day': [
+    '/new-gallery/farewell-day/WhatsApp Image 2026-10-01 at 2.03.41 PM.jpeg',
+    '/new-gallery/farewell-day/WhatsApp Image 2026-10-01 at 2.03.43 PM.jpeg',
+    '/new-gallery/farewell-day/WhatsApp Image 2026-10-01 at 2.03.44 PM.jpeg',
+    '/new-gallery/farewell-day/WhatsApp Image 2026-10-01 at 2.03.45 PM.jpeg',
+    '/new-gallery/farewell-day/WhatsApp Image 2026-10-01 at 2.03.46 PM.jpeg',
+    '/new-gallery/farewell-day/WhatsApp Image 2026-10-01 at 2.03.47 PM.jpeg',
+    '/new-gallery/farewell-day/WhatsApp Image 2026-10-01 at 2.03.49 PM.jpeg',
+    '/new-gallery/farewell-day/image1.jpeg',
+    '/new-gallery/farewell-day/image2.jpeg',
+  ],
+  'field-trip': [
+    '/new-gallery/field-trip/ft-01.jpeg',
+    '/new-gallery/field-trip/ft-02.jpeg',
+    '/new-gallery/field-trip/ft-03.jpeg',
+    '/new-gallery/field-trip/ft-04.jpeg',
+    '/new-gallery/field-trip/ft-05.jpeg',
+  ],
+  'mango-day': [
+    '/new-gallery/mango-day/WLP08607.jpg',
+    '/new-gallery/mango-day/WLP08618.jpg',
+    '/new-gallery/mango-day/WLP08891.jpg',
+    '/new-gallery/mango-day/WLP08908.jpg',
+    '/new-gallery/mango-day/WLP08923.jpg',
+    '/new-gallery/mango-day/WLP09377.jpg',
+    '/new-gallery/mango-day/WLP09389.jpg',
+    '/new-gallery/mango-day/WLP09391.jpg',
+    '/new-gallery/mango-day/WLP09393.jpg',
+    '/new-gallery/mango-day/WLP09395.jpg',
+    '/new-gallery/mango-day/WLP09400.jpg',
+    '/new-gallery/mango-day/WLP09405.jpg',
+    '/new-gallery/mango-day/WLP09433.jpg',
+    '/new-gallery/mango-day/WLP09536.jpg',
+    '/new-gallery/mango-day/WLP09549.jpg',
+    '/new-gallery/mango-day/WLP09563.jpg',
+    '/new-gallery/mango-day/WLP09588.jpg',
+    '/new-gallery/mango-day/WLP09601.jpg',
+    '/new-gallery/mango-day/WLP09603.jpg',
+    '/new-gallery/mango-day/WLP09617.jpg',
+    '/new-gallery/mango-day/WLP09625.jpg',
+    '/new-gallery/mango-day/WLP09638.jpg',
+    '/new-gallery/mango-day/WLP09759.jpg',
+    '/new-gallery/mango-day/WLP09764.jpg',
+    '/new-gallery/mango-day/WLP09768.jpg',
+    '/new-gallery/mango-day/WLP09776.jpg',
+    '/new-gallery/mango-day/WLP09795.jpg',
+    '/new-gallery/mango-day/WLP09887.jpg',
+    '/new-gallery/mango-day/WLP09891.jpg',
+    '/new-gallery/mango-day/WLP09896.jpg',
+    '/new-gallery/mango-day/WLP09901.jpg',
+    '/new-gallery/mango-day/WLP09902.jpg',
+    '/new-gallery/mango-day/WLP09930.jpg',
+  ],
+  'other-memories': [
+    '/new-gallery/other-memories/WhatsApp Video 2026-10-01 at 4.35.41 PM.mp4',
+    '/new-gallery/other-memories/WhatsApp Video 2026-10-01 at 4.35.42 PM.mp4',
+    '/new-gallery/other-memories/WhatsApp Video 2026-10-01 at 9.57.02 AM.mp4',
+    '/new-gallery/other-memories/vid1.mp4',
+  ],
+  'our-campus': [
+    '/new-gallery/our-campus/WLP09934.jpg',
+    '/new-gallery/our-campus/WLP09936.jpg',
+    '/new-gallery/our-campus/WLP09944.jpg',
+    '/new-gallery/our-campus/WhatsApp Image 2026-09-30 at 11.42.39 AM.jpeg',
+    '/new-gallery/our-campus/WhatsApp Image 2026-09-30 at 11.42.40 AM.jpeg',
+    '/new-gallery/our-campus/WhatsApp Image 2026-10-01 at 1.27.17 PM.jpeg',
+    '/new-gallery/our-campus/image_1.jpeg',
+    '/new-gallery/our-campus/image_2.jpeg',
+    '/new-gallery/our-campus/image_3.jpeg',
+    '/new-gallery/our-campus/image_4.jpeg',
+    '/new-gallery/our-campus/image_5.jpeg',
+    '/new-gallery/our-campus/image_6.jpeg',
+  ],
+  'our-kids': [
+    '/new-gallery/our-kids/61d2d7f4-5127-42cb-a606-8abc7f735ab1.JPG.jpeg',
+    '/new-gallery/our-kids/63581a13-251f-4143-9e93-b8ca1f0eb9bf.JPG.jpeg',
+    '/new-gallery/our-kids/IMG_1440.jpg.jpeg',
+    '/new-gallery/our-kids/IMG_1443.jpg.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-09-30 at 11.37.28 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 1.21.01 PM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 1.21.03 PM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.13.40 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.13.41 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.13.42 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.13.44 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.13.47 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.13.49 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.13.51 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.13.52 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.13.53 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.13.55 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.14.32 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.14.33 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.14.34 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.14.37 AM.jpeg',
+    '/new-gallery/our-kids/WhatsApp Image 2026-10-01 at 10.14.39 AM.jpeg',
+    '/new-gallery/our-kids/image_1.jpeg',
+    '/new-gallery/our-kids/image_10.jpeg',
+    '/new-gallery/our-kids/image_11.jpeg',
+    '/new-gallery/our-kids/image_12.jpeg',
+    '/new-gallery/our-kids/image_13.jpeg',
+    '/new-gallery/our-kids/image_14.jpeg',
+    '/new-gallery/our-kids/image_15.jpeg',
+    '/new-gallery/our-kids/image_2.jpeg',
+    '/new-gallery/our-kids/image_3.jpeg',
+    '/new-gallery/our-kids/image_4.jpeg',
+    '/new-gallery/our-kids/image_5.jpeg',
+    '/new-gallery/our-kids/image_6.jpeg',
+    '/new-gallery/our-kids/image_7.jpeg',
+    '/new-gallery/our-kids/image_8.jpeg',
+    '/new-gallery/our-kids/image_9.jpeg',
+  ],
+  'our-teachers': [
+    '/new-gallery/our-teachers/WhatsApp Image 2026-10-01 at 1.21.02 PM.jpeg',
+    '/new-gallery/our-teachers/WhatsApp Image 2026-10-01 at 1.21.03 PM.jpeg',
+    '/new-gallery/our-teachers/WhatsApp Image 2026-10-01 at 2.04.34 PM.jpeg',
+    '/new-gallery/our-teachers/WhatsApp Image 2026-10-01 at 2.04.35 PM.jpeg',
+    '/new-gallery/our-teachers/image_1.jpeg',
+    '/new-gallery/our-teachers/imge_2.jpeg',
+  ],
+  'talent-show': [
+    '/new-gallery/talent-show/WhatsApp Image 2026-10-01 at 2.04.46 PM.jpeg',
+    '/new-gallery/talent-show/WhatsApp Image 2026-10-01 at 2.04.47 PM.jpeg',
+    '/new-gallery/talent-show/WhatsApp Image 2026-10-01 at 2.04.48 PM.jpeg',
+    '/new-gallery/talent-show/WhatsApp Image 2026-10-01 at 2.04.49 PM.jpeg',
+    '/new-gallery/talent-show/WhatsApp Image 2026-10-01 at 2.04.50 PM.jpeg',
+    '/new-gallery/talent-show/WhatsApp Image 2026-10-01 at 2.04.51 PM.jpeg',
+    '/new-gallery/talent-show/WhatsApp Image 2026-10-01 at 2.04.52 PM.jpeg',
+    '/new-gallery/talent-show/WhatsApp Image 2026-10-01 at 4.35.41 PM.jpeg',
+    '/new-gallery/talent-show/ts-01.jpeg',
+    '/new-gallery/talent-show/ts-02.jpeg',
+    '/new-gallery/talent-show/ts-03.jpeg',
+    '/new-gallery/talent-show/ts-04.jpeg',
+    '/new-gallery/talent-show/ts-05.jpeg',
+    '/new-gallery/talent-show/ts-06.jpeg',
+    '/new-gallery/talent-show/ts-07.jpeg',
+    '/new-gallery/talent-show/ts-08.jpeg',
+    '/new-gallery/talent-show/ts-09.jpeg',
+    '/new-gallery/talent-show/ts-10.jpeg',
+    '/new-gallery/talent-show/ts-11.jpeg',
+    '/new-gallery/talent-show/ts-12.jpeg',
+    '/new-gallery/talent-show/ts-13.jpeg',
+    '/new-gallery/talent-show/ts-14.jpeg',
+  ],
+  'world-photography-day': [
+    '/new-gallery/world-photography-day/image_1.jpeg',
+    '/new-gallery/world-photography-day/image_2.jpeg',
+    '/new-gallery/world-photography-day/wpd-01.jpeg',
+    '/new-gallery/world-photography-day/wpd-04.jpeg',
+    '/new-gallery/world-photography-day/wpd-05.jpeg',
+    '/new-gallery/world-photography-day/wpd-06.jpeg',
+    '/new-gallery/world-photography-day/wpd-07.jpeg',
+    '/new-gallery/world-photography-day/wpd-08.jpeg',
+    '/new-gallery/world-photography-day/wpd-09.jpeg',
+    '/new-gallery/world-photography-day/wpd-10.jpeg',
+    '/new-gallery/world-photography-day/wpd-11.jpeg',
+  ],
+  'world-thrift-day': ['/new-gallery/world-thrift-day/wtd-01.jpeg'],
+};
+
+const GALLERY_BY_TAB: Record<string, GalleryItem[]> = Object.fromEntries(
+  Object.entries(GALLERY_FILES_BY_CATEGORY).map(([category, files]) => [
+    category,
+    files
+      .map((src) => ({
+        src,
+        category,
+        type: src.toLowerCase().endsWith('.mp4') ? 'video' : 'photo',
+      }))
+      .slice(0, 20),
+  ]),
+);
+
+const ALL_PHOTOS = (GALLERY_BY_TAB.all ?? []).filter((item) => item.type === 'photo').slice(0, 20);
+
+const getGalleryItems = (tab: string): GalleryItem[] => {
+  if (tab === 'all') return ALL_PHOTOS;
+  if (tab === 'other-memories') return GALLERY_BY_TAB[tab] ?? [];
+  return (GALLERY_BY_TAB[tab] ?? []).filter((item) => item.type === 'photo').slice(0, 20);
+};
+
+function GalleryLightbox({ items, index, onClose, onChange }: { items: GalleryItem[]; index: number; onClose: () => void; onChange: (i: number) => void }) {
+  const item = items[index];
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowRight') onChange((index + 1) % items.length);
+      if (e.key === 'ArrowLeft') onChange((index - 1 + items.length) % items.length);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [index, onClose, onChange, items.length]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" onClick={onClose}>
+      <button onClick={onClose} className="absolute right-4 top-4 grid size-11 place-items-center rounded-full bg-white/10 text-white hover:bg-white/20" aria-label="Close">
+        <X className="size-5" />
+      </button>
+      <button onClick={(e) => { e.stopPropagation(); onChange((index - 1 + items.length) % items.length); }} className="absolute left-4 top-1/2 -translate-y-1/2 grid size-11 place-items-center rounded-full bg-white/10 text-white hover:bg-white/20 hidden sm:grid" aria-label="Previous">
+        <ArrowLeft className="size-5" />
+      </button>
+      <div className="relative flex max-h-[90vh] max-w-4xl w-full items-center justify-center" onClick={(e) => e.stopPropagation()}>
+        {item.type === 'video' ? (
+          <video src={item.src} controls autoPlay className="max-h-[85vh] w-full rounded-[20px] bg-black" />
+        ) : (
+          <img src={item.src} alt="Gallery" className="max-h-[85vh] w-full rounded-[20px] object-contain" />
+        )}
+      </div>
+      <button onClick={(e) => { e.stopPropagation(); onChange((index + 1) % items.length); }} className="absolute right-4 top-1/2 -translate-y-1/2 grid size-11 place-items-center rounded-full bg-white/10 text-white hover:bg-white/20 hidden sm:grid" aria-label="Next">
+        <ArrowRight className="size-5" />
+      </button>
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/50 px-4 py-1.5 text-xs font-bold text-white/70">
+        {index + 1} / {items.length}
+      </div>
+    </div>
+  );
+}
+
+function GallerySection({ onOpen: _onOpen }: { onOpen: (index: number) => void }) {
+  const [activeTab, setActiveTab] = useState('all');
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const tabsRef = useRef<HTMLDivElement>(null);
+
+  const filtered = getGalleryItems(activeTab);
+
+  useEffect(() => { document.body.style.overflow = lightboxIndex !== null ? 'hidden' : ''; return () => { document.body.style.overflow = ''; }; }, [lightboxIndex]);
+
+  return (
+    <section id="gallery" className="section-pad bg-page">
+      <div className="container-wide">
+        <SectionHeading eyebrow="A window into our world" title="Every moment, beautifully remembered" text="Browse through our memories — from everyday learning to special celebrations." />
+
+        {/* Scrollable tabs */}
+        <div ref={tabsRef} className="mt-10 flex gap-2 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {TABS.map(tab => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              className={`shrink-0 rounded-full px-4 py-2 text-xs font-bold transition-all ${
+                activeTab === tab.key
+                  ? 'bg-[#E8231A] text-white shadow-[0_4px_12px_rgba(232,35,26,.3)]'
+                  : 'bg-card border border-light text-secondary hover:border-[#E8231A] hover:text-[#E8231A]'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Photo count */}
+        <p className="mt-4 text-xs font-bold text-tertiary">{filtered.length} {filtered.length === 1 ? 'memory' : 'memories'}</p>
+
+        {/* Grid */}
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {filtered.map((item, i) => (
+            <button
+              key={item.src}
+              onClick={() => setLightboxIndex(i)}
+              className="group relative aspect-square overflow-hidden rounded-[18px] bg-[#1a1f2e] focus:outline-none focus:ring-2 focus:ring-[#E8231A]"
+              aria-label={`Open ${item.category} ${item.type}`}
+            >
+              {item.type === 'video' ? (
+                <>
+                  <video src={item.src} className="h-full w-full object-cover" muted preload="metadata" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 transition-colors group-hover:bg-black/50">
+                    <div className="grid size-12 place-items-center rounded-full bg-white/90 shadow-lg transition-transform group-hover:scale-110">
+                      <CirclePlay className="size-6 fill-[#E8231A] text-[#E8231A]" />
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <img
+                    src={item.src}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/20" />
+                  <span className="absolute right-2 top-2 grid size-8 place-items-center rounded-full bg-white/80 text-primary opacity-0 transition-opacity group-hover:opacity-100">
+                    <ArrowUpRight className="size-3.5" />
+                  </span>
+                </>
+              )}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {lightboxIndex !== null && (
+        <GalleryLightbox
+          items={filtered}
+          index={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onChange={setLightboxIndex}
+        />
+      )}
+    </section>
+  );
+}
+
 function EventsSection() {
-  const events = [['01', 'Annual Day Celebration', 'Date to be announced', 'Kids Nest Campus', 'bg-card-prekg'], ['02', 'Little Artists Day', 'Date to be announced', 'Art & creativity', 'bg-card-playgroup'], ['03', 'Sports Fiesta', 'Date to be announced', 'Games & activities', 'bg-card-lkg']];
-  return <section id="upcoming-events" className="section-pad bg-page"><div className="container-wide"><div className="flex items-end justify-between gap-5"><SectionHeading eyebrow="Save the little dates" title="There is always something to look forward to" /><button onClick={() => scrollToId('contact')} className="mb-2 hidden items-center gap-2 text-xs font-bold text-brand-teal md:flex" data-testid="button-event-enquiry">Ask about events <ArrowUpRight className="size-4" /></button></div><div className="mt-11 grid gap-4 lg:grid-cols-3">{events.map(([num, title, date, place, color]) => <article key={title} className={`relative overflow-hidden rounded-[24px] ${color} p-6`}><span className="font-display text-5xl text-primary/15">{num}</span><div className="mt-7"><h3 className="font-display text-2xl text-primary">{title}</h3><div className="mt-4 grid gap-2 text-xs font-bold text-tertiary"><span className="inline-flex items-center gap-2"><CalendarDays className="size-4 text-brand-coral" /> {date}</span><span className="inline-flex items-center gap-2"><MapPin className="size-4 text-brand-teal" /> {place}</span></div></div><div className="absolute -right-5 -top-5 size-24 rounded-full border-[12px] border-card/30" /></article>)}</div></div></section>;
+  const month = { name: 'October', number: '10', year: '2026' };
+  const events = [
+    { day: '02', title: 'Gandhi Jayanti', color: 'bg-card-prekg' },
+    { day: '04', title: 'World Space Day', color: 'bg-card-lkg' },
+    { day: '08', title: 'Air Force Day', color: 'bg-card-playgroup' },
+    { day: '09', title: 'Brown Colour & World Post Office Day', color: 'bg-card-ukg' },
+    { day: '15', title: 'World Student Day', color: 'bg-card-prekg' },
+    { day: '16', title: 'Vijayadashami (Traditional Attire) & Thirukural Competition', color: 'bg-card-playgroup' },
+    { day: '21', title: 'Vijayadasami Special Pooja & Walk-in Admissions', color: 'bg-card-lkg' },
+    { day: '23', title: 'Rainbow Colour', color: 'bg-card-prekg' },
+    { day: '30', title: 'Purple Colour', color: 'bg-card-lkg' },
+    { day: '31', title: 'National Unity Day, World Thrift Day & Halloween Day', color: 'bg-card-ukg' },
+  ];
+  return <section id="upcoming-events" className="section-pad bg-page"><div className="container-wide"><div className="flex items-end justify-between gap-5"><SectionHeading eyebrow="Save the little dates" title={`${month.name} ${month.year} at Kids Nest`} text={`School events and celebrations for ${month.name} ${month.year}.`} /><button onClick={() => scrollToId('contact')} className="mb-2 hidden items-center gap-2 text-xs font-bold text-brand-teal md:flex" data-testid="button-event-enquiry">Ask about events <ArrowUpRight className="size-4" /></button></div><div className="mt-11 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">{events.map(({ day, title, color }) => <article key={day} className={`relative overflow-hidden rounded-[24px] ${color} p-6`} data-testid={`upcoming-event-${day}`}><time dateTime={`${month.year}-${month.number}-${day}`} className="inline-flex items-center gap-2 text-xs font-bold text-secondary"><CalendarDays className="size-4 text-brand-coral" /> {month.name} {Number(day)}, {month.year}</time><h3 className="mt-5 max-w-[90%] font-display text-xl leading-tight text-primary">{title}</h3><div className="absolute -right-5 -top-5 size-24 rounded-full border-[12px] border-card/30" /></article>)}</div></div></section>;
 }
 
 const reviews = [
@@ -444,15 +794,15 @@ function TestimonialSection() {
               <button
                 key={src}
                 onClick={() => goTo(index)}
-                className={`snap-center shrink-0 overflow-hidden rounded-[24px] border-4 transition-all duration-300 ${
+                className={`snap-center shrink-0 overflow-hidden rounded-[24px] border-4 bg-white transition-all duration-300 ${
                   active === index
                     ? 'border-brand-coral shadow-[0_16px_40px_rgba(239,119,95,.25)] scale-[1.02]'
                     : 'border-card/60 shadow-[var(--shadow-card)] scale-100 opacity-80 hover:opacity-100'
-                } w-[260px] sm:w-[300px] md:w-[320px]`}
+                } h-[290px] w-[260px] sm:h-[330px] sm:w-[300px] md:h-[360px] md:w-[320px]`}
                 aria-label={`Review poster ${index + 1}`}
                 data-testid={`button-review-${index}`}
               >
-                <img src={src} alt={`Parent review ${index + 1}`} className="w-full object-contain" />
+                <img src={src} alt={`Parent review ${index + 1}`} className="h-full w-full object-contain p-2" />
               </button>
             ))}
           </div>
@@ -505,22 +855,37 @@ function FacilitySection() {
 
 function ConductedEventsSection() {
   const events = [
-    { title: "Children's Day", date: 'November 14', description: 'A joyful celebration of childhood with games, performances and lots of smiles.', photo: '/events/childrens-day.jpeg', color: 'bg-card-playgroup' },
-    { title: 'World Photography Day', date: 'August 19', description: 'Little photographers explored the world through a lens, capturing their unique perspective.', photo: '/events/world-photography-day.jpeg', color: 'bg-card-prekg' },
-    { title: 'Fancy Dress Competition', date: 'December', description: 'Our little ones dressed up as their favourite characters and stole every heart in the room.', photo: '/events/fancy-dress.jpeg', color: 'bg-card-lkg' },
-    { title: 'Mango Day', date: 'July', description: 'A fruity, fun-filled day celebrating the king of fruits with activities, crafts and yummy treats.', photo: '/events/mango-day.jpg', color: 'bg-card-ukg' },
+    { title: "Children's Day", description: 'A joyful celebration of childhood with games, performances, and lots of smiles.', photo: '/events/childrens-day.jpeg', color: 'bg-card-playgroup' },
+    { title: 'World Photography Day', description: 'Little photographers explored the world through a lens, capturing their unique perspective.', photo: '/events/world-photography-day.jpeg', color: 'bg-card-prekg' },
+    { title: "Fancy Dress Competition", description: 'Our little ones dressed as their favourite characters.', photo: '/events/fancy-dress.jpeg', color: 'bg-card-lkg' },
+    { title: 'Mango Day', description: 'A fruity, fun-filled day celebrating the king of fruits with activities, crafts and yummy treats.', photo: '/events/mango-day.jpg', color: 'bg-card-ukg' },
   ];
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  function scrollEvents(direction: number) {
+    const carousel = carouselRef.current;
+    const firstCard = carousel?.firstElementChild as HTMLElement | null;
+    if (!carousel || !firstCard) return;
+    const gap = Number.parseFloat(getComputedStyle(carousel).columnGap) || 0;
+    carousel.scrollBy({ left: direction * (firstCard.offsetWidth + gap), behavior: 'instant' });
+  }
+
   return (
     <section id="events" className="section-pad bg-page">
       <div className="container-wide">
-        <SectionHeading eyebrow="Events we celebrated" title="Moments that made us smile" text="Every event at Kidsnest is a memory in the making — full of colour, laughter and little surprises." />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-          {events.map(({ title, date, description, photo, color }, index) => (
-            <article key={title} className={`group overflow-hidden rounded-[28px] ${color} transition-all duration-300 hover:-translate-y-2`} data-testid={`conducted-event-${index}`}>
+        <div className="flex items-end justify-between gap-4">
+          <SectionHeading eyebrow="Events we celebrated" title="Moments that made us smile" text="Every event at Kidsnest is a memory in the making — full of colour, laughter and little surprises." />
+          <div className="mb-2 hidden gap-2 xl:flex">
+            <button onClick={() => scrollEvents(-1)} className="grid size-10 place-items-center rounded-full border border-light bg-card text-primary shadow-[var(--shadow-card)] transition-colors hover:bg-brand-yellow" aria-label="Previous event" data-testid="button-events-prev"><ArrowLeft className="size-4" /></button>
+            <button onClick={() => scrollEvents(1)} className="grid size-10 place-items-center rounded-full border border-light bg-card text-primary shadow-[var(--shadow-card)] transition-colors hover:bg-brand-yellow" aria-label="Next event" data-testid="button-events-next"><ArrowRight className="size-4" /></button>
+          </div>
+        </div>
+        <div ref={carouselRef} className="mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden xl:grid xl:grid-cols-4 xl:overflow-visible xl:pb-0 xl:snap-none" data-testid="events-carousel">
+          {events.map(({ title, description, photo, color }, index) => (
+            <article key={title} className={`group w-[84vw] max-w-[360px] shrink-0 snap-center overflow-hidden rounded-[28px] ${color} transition-all duration-300 hover:-translate-y-2 xl:w-auto xl:max-w-none xl:shrink`} data-testid={`conducted-event-${index}`}>
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={photo} alt={title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <span className="absolute right-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[.65rem] font-bold text-primary">{date}</span>
               </div>
               <div className="p-5">
                 <h3 className="font-display text-xl text-primary">{title}</h3>
@@ -528,6 +893,10 @@ function ConductedEventsSection() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="mt-3 flex justify-start gap-3 xl:hidden">
+          <button onClick={() => scrollEvents(-1)} className="grid size-10 place-items-center rounded-full border border-light bg-card text-primary shadow-[var(--shadow-card)] transition-colors hover:bg-brand-yellow" aria-label="Previous event" data-testid="button-events-prev-mobile"><ArrowLeft className="size-4" /></button>
+          <button onClick={() => scrollEvents(1)} className="grid size-10 place-items-center rounded-full border border-light bg-card text-primary shadow-[var(--shadow-card)] transition-colors hover:bg-brand-yellow" aria-label="Next event" data-testid="button-events-next-mobile"><ArrowRight className="size-4" /></button>
         </div>
       </div>
     </section>
@@ -579,17 +948,9 @@ function Footer() {
         <div className="mt-6 flex gap-2"><a href="https://www.instagram.com/kids_nest_9/" target="_blank" rel="noopener noreferrer" aria-label="Kids Nest on Instagram" className="grid size-9 place-items-center rounded-full bg-white/15 transition-colors hover:bg-[var(--brand-coral)]" data-testid="link-instagram"><Instagram className="size-4" /></a><a href="https://www.facebook.com/kidsnestcoimbatore/" target="_blank" rel="noopener noreferrer" aria-label="Kids Nest on Facebook" className="grid size-9 place-items-center rounded-full bg-white/15 transition-colors hover:bg-[var(--brand-teal)]" data-testid="link-facebook"><Facebook className="size-4" /></a><a href="https://youtube.com/@learnwithkidsnest?si=pk04LoiiiWx7PZxP" target="_blank" rel="noopener noreferrer" aria-label="Kids Nest on YouTube" className="grid size-9 place-items-center rounded-full bg-white/15 transition-colors hover:bg-[var(--brand-coral)]" data-testid="link-youtube"><Youtube className="size-4" /></a></div></div><div><h2 className="text-xs font-bold uppercase tracking-[.18em] text-[var(--brand-yellow)]">Explore</h2><div className="mt-5 grid grid-cols-2 gap-x-5 gap-y-3">{links.map(([label, id]) => <a key={id} href={`#${id}`} className="text-sm text-[#d4f1f9] transition-colors hover:text-white" data-testid={`link-footer-${id}`}>{label}</a>)}</div></div><div><h2 className="text-xs font-bold uppercase tracking-[.18em] text-[var(--brand-yellow)]">Visit the nest</h2><p className="mt-5 text-sm leading-6 text-[#d4f1f9]">57, Indira Nagar, Sungam Bye-Pass Road,<br />Coimbatore - 641045<br />0422-2314991 / 7358136930<br />kidsnestplayschool@outlook.com</p><a href="#contact" className="mt-5 inline-flex items-center text-sm font-bold text-white" data-testid="link-footer-contact">Start a conversation <ArrowUpRight className="ml-2 size-4" /></a></div></div><div className="mt-12 flex flex-col justify-between gap-3 border-t border-white/15 pt-6 text-xs text-[#a8c5d4] sm:flex-row"><span>© 2026 Kidsnest. All Rights Reserved.</span><span>Made for curious beginnings.</span></div></div></footer>;
 }
 
-function Lightbox({ index, onClose, onChange }: { index: number; onClose: () => void; onChange: (index: number) => void }) {
-  const item = gallery[index];
-  useEffect(() => { const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape') onClose(); if (event.key === 'ArrowRight') onChange((index + 1) % gallery.length); if (event.key === 'ArrowLeft') onChange((index - 1 + gallery.length) % gallery.length); }; window.addEventListener('keydown', onKey); return () => window.removeEventListener('keydown', onKey); }, [index, onClose, onChange]);
-  return <div className="fixed inset-0 z-50 grid place-items-center bg-[#203047]/85 p-5 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label={`${item.label} gallery image`}><button onClick={onClose} className="absolute right-5 top-5 grid size-11 place-items-center rounded-full bg-white text-[#203047]" aria-label="Close gallery" data-testid="button-lightbox-close"><X /></button><div className="relative w-full max-w-3xl overflow-hidden rounded-[28px] bg-[#203047]"><img src={item.photo} alt={item.label} className="w-full object-contain max-h-[80vh]" /><div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#203047]/75 to-transparent p-7 pt-20 text-white"><small className="font-bold uppercase tracking-[.16em] text-white/70">Kids Nest</small><h2 className="mt-1 font-display text-3xl">{item.label}</h2><p className="mt-1 text-sm text-white/80">{item.caption}</p></div></div><div className="absolute bottom-6 flex gap-2"><button onClick={() => onChange((index - 1 + gallery.length) % gallery.length)} className="grid size-10 place-items-center rounded-full bg-white text-[#203047]" aria-label="Previous image" data-testid="button-lightbox-prev"><ArrowLeft className="size-4" /></button><button onClick={() => onChange((index + 1) % gallery.length)} className="grid size-10 place-items-center rounded-full bg-white text-[#203047]" aria-label="Next image" data-testid="button-lightbox-next"><ArrowRight className="size-4" /></button></div></div>;
-}
-
 function Home() {
-  const [lightbox, setLightbox] = useState<number | null>(null);
   const [enquiryOpen, setEnquiryOpen] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);
-  const closeLightbox = () => setLightbox(null);
   useEffect(() => {
     const elements = pageRef.current?.querySelectorAll('.reveal:not(.is-visible)');
     if (!elements) return;
@@ -597,10 +958,8 @@ function Home() {
     elements.forEach((element) => observer.observe(element));
     return () => observer.disconnect();
   }, []);
-  useEffect(() => { document.body.style.overflow = lightbox !== null ? 'hidden' : ''; return () => { document.body.style.overflow = ''; }; }, [lightbox]);
-  return <div ref={pageRef} className="site-shell min-h-screen bg-page"><Header onEnquire={() => { setEnquiryOpen(true); }} /><main><Hero onEnquire={() => setEnquiryOpen(true)} /><StorySection /><FounderSection /><ProgramsSection /><LittleNestSection onEnquire={() => setEnquiryOpen(true)} /><TeachersSection /><WhySection /><GallerySection onOpen={setLightbox} /><EventsSection /><TestimonialSection /><FacilitySection /><ConductedEventsSection /><CampusSection /><FAQSection /><AdmissionsCTA onEnquire={() => setEnquiryOpen(true)} /><ContactSection /></main><Footer />
+  return <div ref={pageRef} className="site-shell min-h-screen bg-page"><Header onEnquire={() => { setEnquiryOpen(true); }} /><main><Hero onEnquire={() => setEnquiryOpen(true)} /><StorySection /><FounderSection /><ProgramsSection /><LittleNestSection onEnquire={() => setEnquiryOpen(true)} /><TeachersSection /><WhySection /><ActivitiesSection /><GallerySection onOpen={() => {}} /><EventsSection /><TestimonialSection /><FacilitySection /><ConductedEventsSection /><CampusSection /><FAQSection /><AdmissionsCTA onEnquire={() => setEnquiryOpen(true)} /><ContactSection /></main><Footer />
     <a href="#contact" className="fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 rounded-full bg-[#E8231A] px-5 py-3.5 text-sm font-bold text-white shadow-[0_10px_25px_rgba(232,35,26,.35)] transition-transform hover:-translate-y-1 sm:hidden" data-testid="link-mobile-floating-enquire"><MessageCircle className="size-4" /> Enquire now</a>
-    {lightbox !== null && <Lightbox index={lightbox} onClose={closeLightbox} onChange={setLightbox} />}
     {enquiryOpen && <div className="fixed inset-0 z-50 grid place-items-center bg-primary/50 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="enquiry-title" onMouseDown={(event) => { if (event.target === event.currentTarget) setEnquiryOpen(false); }}><div className="relative w-full max-w-md rounded-[28px] bg-page p-7 shadow-[0_30px_80px_rgba(32,48,71,.28)]"><button onClick={() => setEnquiryOpen(false)} className="absolute right-5 top-5 grid size-9 place-items-center rounded-full bg-section-mint/60 text-primary" aria-label="Close enquiry dialog" data-testid="button-enquiry-close"><X className="size-4" /></button><span className="grid size-11 place-items-center rounded-2xl bg-brand-gold text-primary"><Sparkles className="size-5" /></span><h2 id="enquiry-title" className="mt-5 font-display text-3xl text-primary">Let's plan a visit</h2><p className="mt-2 text-sm leading-6 text-tertiary">Share your details and the Kids Nest team will be in touch.</p><div className="mt-6 grid gap-3"><button className="mt-2 rounded-full bg-brand-coral px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-1" data-testid="button-enquiry-submit" onClick={() => window.location.href = 'mailto:kidsnestplayschool@outlook.com'}>Mail to Us <Mail className="ml-2 inline size-4" /></button><a href="https://wa.me/917358136930?text=Hi%20Kids%20Nest,%20I%20would%20like%20to%20know%20more%20about%20your%20programs." target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center justify-center rounded-full bg-[#25D366] px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-1" data-testid="button-enquiry-whatsapp">WhatsApp Chat <MessageCircle className="ml-2 size-4" /></a><a href="tel:04222314991" className="mt-2 flex items-center justify-center rounded-full bg-brand-teal px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-1" data-testid="button-enquiry-call">Call Now <Phone className="ml-2 size-4" /></a></div></div></div>}
   </div>;
 }

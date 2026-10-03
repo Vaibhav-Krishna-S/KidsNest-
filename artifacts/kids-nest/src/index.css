@@ -51,10 +51,10 @@
   
   /* Page & Section Backgrounds (60% of palette - warm, breathing space) */
   --bg-page: #FFF9ED;
-  --bg-section-mint: #BFE8D8;
-  --bg-section-sky: #C9EEF5;
-  --bg-section-lavender: #DDD2F4;
-  --bg-section-peach: #FFD9C7;
+  --bg-section-mint: #DFF4EC;
+  --bg-section-sky: #DDF3F9;
+  --bg-section-lavender: #EAE0FB;
+  --bg-section-peach: #FFE3D5;
   --bg-section-hero: #E8F8FA;
   --bg-section-dark: #203047;
   --bg-card: #FFFFFF;
@@ -75,10 +75,10 @@
   --color-yellow: #FFD45A;
   
   /* Program Card Colors - Playful & Collectible */
-  --card-playgroup: #BFE8D8;
-  --card-prekg: #C9EEF5;
-  --card-lkg: #DDD2F4;
-  --card-ukg: #FFD9C7;
+  --card-playgroup: #ECFAF4;
+  --card-prekg: #E8F7FB;
+  --card-lkg: #F1EBFF;
+  --card-ukg: #FFEDE1;
   
   /* Activity Card Colors (Learning Philosophy section) */
   --activity-art: #C9EEF5;
@@ -165,16 +165,16 @@
   /* ===== DARK THEME - KIDS NEST PREMIUM COLOR PALETTE ===== */
   
   /* Core Surfaces */
-  --bg-page: #0F1419;
-  --bg-section-mint: #1A3A35;
-  --bg-section-sky: #1A3A42;
-  --bg-section-lavender: #2A2540;
-  --bg-section-peach: #3A2A1F;
-  --bg-section-hero: #162630;
-  --bg-section-dark: #0F1419;
-  --bg-card: #1A242D;
-  --bg-input: #161F27;
-  --bg-surface-light: #1A2530;
+  --bg-page: #0B1A1D;
+  --bg-section-mint: #133F3D;
+  --bg-section-sky: #163E4C;
+  --bg-section-lavender: #2E2647;
+  --bg-section-peach: #4A312F;
+  --bg-section-hero: #122B33;
+  --bg-section-dark: #0B1A1D;
+  --bg-card: #12252C;
+  --bg-input: #162C35;
+  --bg-surface-light: #182F38;
   
   /* Text Colors */
   --text-primary: #F5F3ED;
@@ -201,10 +201,10 @@
   --color-yellow: #FFE47A;
   
   /* Program Card Colors (tinted dark backgrounds) */
-  --card-playgroup: #1A3A35;
-  --card-prekg: #1A3A42;
-  --card-lkg: #2A2540;
-  --card-ukg: #3A2A1F;
+  --card-playgroup: #1F4C47;
+  --card-prekg: #1D4D5B;
+  --card-lkg: #3C315E;
+  --card-ukg: #5A403D;
   
   /* Activity Card Colors (Learning Philosophy section) */
   --activity-art: #1A3A42;

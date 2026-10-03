@@ -117,42 +117,58 @@ function HeroIllustration() {
   };
 
   return (
-    <div className="relative mx-auto h-full min-h-[470px] w-full max-w-[610px] reveal is-visible delay-2">
-      <div className="absolute right-[8%] top-[1%] size-16 rotate-12 rounded-full border-4 border-[var(--brand-yellow)] bg-[var(--brand-cream)] shadow-[0_8px_0_rgba(255,212,90,.2)] float-slower" />
-      <div className="absolute bottom-[3%] left-[2%] size-16 rounded-full bg-[var(--brand-coral)] shadow-[0_8px_0_rgba(255,128,107,.15)] float-slow" />
-      <div className="absolute left-[4%] top-[32%] text-4xl font-bold text-[var(--brand-yellow)] float-slow">+</div>
-      <div className="absolute right-[1%] top-[52%] text-3xl font-bold text-[var(--brand-teal)] float-slower">+</div>
-      <div className="absolute inset-x-[7%] bottom-[8%] top-[10%] rotate-[-2deg] rounded-[44px] border-[10px] border-white bg-[var(--brand-yellow)] p-3 shadow-[0_30px_70px_rgba(32,48,71,.12)]">
-        <div className="relative h-full overflow-hidden rounded-[29px] bg-black/5 group cursor-pointer">
-          <video
-            ref={videoRef}
-            src="/kidsnest-promo.mp4"
-            poster="/gallery/hero.jpeg"
-            className="absolute inset-0 h-full w-full object-cover"
-            controls={isPlaying}
-            controlsList="nodownload"
-            loop
-            playsInline
-            preload="metadata"
-            aria-label="Kids Nest school promo video"
-          />
-          {!isPlaying && (
-            <button
-              onClick={handlePlayClick}
-              className="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 hover:bg-black/30 group-hover:bg-black/30"
-              aria-label="Play Kids Nest promo video"
-            >
-              <div className="flex flex-col items-center gap-3">
-                <div className="grid size-16 place-items-center rounded-full bg-white shadow-lg transition-transform group-hover:scale-110">
-                  <CirclePlay className="size-8 text-[var(--brand-teal)] fill-[var(--brand-teal)]" />
+    <div className="relative mx-auto w-full reveal is-visible delay-2">
+      <div className="space-y-6">
+        {/* Decorative elements */}
+        <div className="relative">
+          <div className="absolute right-[5%] top-[-10px] size-12 rotate-12 rounded-full border-4 border-[var(--brand-yellow)] bg-[var(--brand-cream)] shadow-[0_8px_0_rgba(255,212,90,.2)]" />
+          <div className="absolute left-[5%] bottom-[-20px] size-12 rounded-full bg-[var(--brand-coral)] shadow-[0_8px_0_rgba(255,128,107,.15)]" />
+        </div>
+
+        {/* Full-width video container */}
+        <div className="relative w-full rounded-[44px] border-[8px] border-white bg-[var(--brand-yellow)] p-3 shadow-[0_30px_70px_rgba(32,48,71,.12)]">
+          <div className="relative w-full overflow-hidden rounded-[29px] bg-black/5 group cursor-pointer aspect-video">
+            <video
+              ref={videoRef}
+              src="/kidsnest-promo.mp4"
+              poster="/gallery/hero.jpeg"
+              className="absolute inset-0 h-full w-full object-contain"
+              controls={isPlaying}
+              controlsList="nodownload"
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Kids Nest school promo video"
+            />
+            {!isPlaying && (
+              <button
+                onClick={handlePlayClick}
+                className="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 hover:bg-black/30 group-hover:bg-black/30"
+                aria-label="Play Kids Nest promo video"
+              >
+                <div className="flex flex-col items-center gap-3">
+                  <div className="grid size-16 place-items-center rounded-full bg-white shadow-lg transition-transform group-hover:scale-110">
+                    <CirclePlay className="size-8 text-[var(--brand-teal)] fill-[var(--brand-teal)]" />
+                  </div>
+                  <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-[#203047] shadow-md transition-opacity group-hover:opacity-100">Watch Our Promo</span>
                 </div>
-                <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-[#203047] shadow-md transition-opacity group-hover:opacity-100">Watch Our Promo</span>
-              </div>
-            </button>
-          )}
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Wonder lives here badge */}
+        <div className="flex justify-end">
+          <div className="rotate-[4deg] rounded-2xl bg-white px-4 py-3 shadow-[0_12px_25px_rgba(32,48,71,.12)]">
+            <p className="font-display text-lg text-[var(--brand-navy)]">wonder lives here</p>
+            <div className="mt-1 flex gap-1 text-[var(--brand-yellow)]">
+              <Star className="size-3 fill-current" />
+              <Star className="size-3 fill-current" />
+              <Star className="size-3 fill-current" />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="absolute bottom-[2%] right-[2%] rotate-[4deg] rounded-2xl bg-white px-4 py-3 shadow-[0_12px_25px_rgba(32,48,71,.12)]"><p className="font-display text-lg text-[var(--brand-navy)]">wonder lives here</p><div className="mt-1 flex gap-1 text-[var(--brand-yellow)]"><Star className="size-3 fill-current" /><Star className="size-3 fill-current" /><Star className="size-3 fill-current" /></div></div>
     </div>
   );
 }

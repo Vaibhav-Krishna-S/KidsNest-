@@ -24,11 +24,7 @@ const programs = [
   { title: 'LKG', age: '4-5 years', description: 'A nurturing environment for self-expression, exploration, and holistic development.', color: 'bg-[var(--card-lkg)]', icon: Sparkles },
   { title: 'UKG', age: '5-6 years', description: 'A joyful learning environment that values each child\'s individual growth and care.', color: 'bg-[var(--card-ukg)]', icon: Compass },
 ];
-const teachers = [
-  { name: 'Ms. Nivetha', role: 'Early Childhood Educator', detail: 'B.Ed · Early Years', area: 'Language & storytelling', quote: 'Every child learns differently. Our job is to help them discover how they shine.', initials: 'N', tint: 'bg-[var(--bg-section-peach)]' },
-  { name: 'Ms. Meera', role: 'Lead Facilitator', detail: 'Montessori Certified', area: 'Creative exploration', quote: 'The smallest questions often open the biggest doors to learning.', initials: 'M', tint: 'bg-[var(--bg-section-sky)]' },
-  { name: 'Ms. Kavya', role: 'Movement & Music Guide', detail: 'B.A. Psychology', area: 'Expression & wellbeing', quote: 'When children feel safe to be themselves, learning starts to feel like joy.', initials: 'K', tint: 'bg-[var(--bg-section-lavender)]' },
-];
+
 
 const faqs = [
   ['What age groups does Kids Nest accept?', 'Infant care is available from 12 months. Our school programs are Play Group (2-3 years), Pre-KG (3-4 years), LKG (4-5 years), and UKG (5-6 years).'],
@@ -311,15 +307,51 @@ function LittleNestSection({ onEnquire }: { onEnquire: () => void }) {
   );
 }
 
-function TeachersSection() {
-  return <section id="teachers" className="section-pad bg-page">
-    <div className="container-wide"><SectionHeading eyebrow="The people who make the place" title="Little learners deserve big hearts" text="Our teachers are more than educators - they are mentors, storytellers, cheerleaders and trusted companions on every child's learning journey." />
-      <div className="mt-12 grid gap-5 md:grid-cols-3">{teachers.map((teacher, index) => <article className="group overflow-hidden rounded-[28px] border border-light bg-card transition-all duration-300 hover:-translate-y-2 hover:shadow-[var(--shadow-card)]" key={teacher.name} data-testid={`teacher-card-${index}`}>
-        <div className={`relative flex h-56 items-end justify-center overflow-hidden ${teacher.tint}`}><div className="absolute left-5 top-5 rounded-full bg-card/65 px-3 py-1 text-[.6rem] font-bold uppercase tracking-[.15em] text-secondary">meet the team</div><div className="relative h-40 w-36 rounded-t-[70px] bg-[#c98c6d]"><div className="absolute -top-5 left-2 size-32 rounded-full bg-[#835c4d]" /><div className="absolute left-5 top-10 size-3 rounded-full bg-[var(--brand-navy)] shadow-[34px_0_0_var(--brand-navy)]" /><div className="absolute left-11 top-[78px] h-2 w-9 rounded-full bg-[var(--brand-coral)]" /><div className="absolute -left-3 top-24 h-28 w-10 rotate-[16deg] rounded-full bg-[#c98c6d]" /><div className="absolute -right-3 top-24 h-28 w-10 rotate-[-16deg] rounded-full bg-[#c98c6d]" /><span className="absolute bottom-5 left-1/2 -translate-x-1/2 font-display text-3xl text-white/80">{teacher.initials}</span></div></div>
-        <div className="p-6"><h3 className="font-display text-2xl text-primary">{teacher.name}</h3><p className="mt-1 text-sm font-bold text-brand-teal">{teacher.role}</p><div className="mt-4 flex flex-wrap gap-2 text-[.68rem] font-bold text-tertiary"><span className="rounded-full bg-section-mint/60 px-2.5 py-1">{teacher.detail}</span><span className="rounded-full bg-section-peach/60 px-2.5 py-1">{teacher.area}</span></div><p className="mt-5 text-sm italic leading-6 text-tertiary">"{teacher.quote}"</p></div>
-      </article>)}</div>
-    </div>
-  </section>;
+function PrincipalSection() {
+  return (
+    <section id="principal" className="section-pad bg-section-mint">
+      <div className="container-wide">
+        <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_1fr]">
+          {/* Principal story */}
+          <div className="reveal">
+            <span className="eyebrow">Our Principal</span>
+            <h2 className="mt-4 font-display text-[clamp(2.5rem,5vw,4.2rem)] leading-[.96] tracking-[-.055em] text-primary">
+              Guiding every child with <span className="text-brand-teal">wisdom</span> & <span className="text-brand-coral">warmth</span>
+            </h2>
+            <p className="mt-6 leading-7 text-secondary">
+              <strong className="text-primary">Mrs. Elizabeth Fernandez</strong> leads Kidsnest School with a deep commitment to nurturing young minds. With years of experience in early childhood education, she brings a thoughtful, child-first approach to every aspect of school life.
+            </p>
+            <p className="mt-4 leading-7 text-secondary">
+              Under her leadership, Kidsnest continues to build an environment where curiosity is celebrated, every child feels valued, and learning is a joyful, everyday adventure.
+            </p>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-2xl border border-light bg-card/80 p-4">
+                <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-[.1em] text-brand-teal"><Heart className="size-3.5 fill-current" /> Child-First Leadership</span>
+                <p className="mt-2 text-sm leading-6 text-tertiary">Dedicated to creating a safe, inclusive, and stimulating space where every child can grow with confidence.</p>
+              </div>
+              <div className="rounded-2xl border border-light bg-card/80 p-4">
+                <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-[.1em] text-brand-coral"><TreePine className="size-3.5" /> Building bright futures</span>
+                <p className="mt-2 text-sm leading-6 text-tertiary">Guiding families and educators alike, with warmth, expertise, and an unwavering belief in every child's potential.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Principal photo card */}
+          <div className="relative mx-auto w-full max-w-[420px] reveal delay-1">
+            <div className="absolute -right-4 -top-4 size-48 rounded-full bg-[var(--brand-teal)]/20 blur-2xl" />
+            <div className="absolute -bottom-4 -left-4 size-48 rounded-full bg-[var(--brand-yellow)]/15 blur-2xl" />
+            <div className="relative overflow-hidden rounded-[36px] border-4 border-card shadow-[0_24px_60px_rgba(32,48,71,.14)]">
+              <img src="/principal.png" alt="Mrs. Elizabeth Fernandez, Principal of Kidsnest School" className="w-full object-cover" />
+              <div className="bg-card p-6 text-center">
+                <h3 className="font-display text-2xl text-primary">Mrs. Elizabeth Fernandez</h3>
+                <p className="mt-1 text-sm font-bold text-brand-teal">Principal, Kidsnest School</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 function WhySection() {
@@ -954,7 +986,7 @@ function Home() {
     elements.forEach((element) => observer.observe(element));
     return () => observer.disconnect();
   }, []);
-  return <div ref={pageRef} className="site-shell min-h-screen bg-page"><Header onEnquire={() => { setEnquiryOpen(true); }} /><main><Hero onEnquire={() => setEnquiryOpen(true)} /><StorySection /><FounderSection /><ProgramsSection /><LittleNestSection onEnquire={() => setEnquiryOpen(true)} /><TeachersSection /><WhySection /><ActivitiesSection /><GallerySection onOpen={() => {}} /><EventsSection /><TestimonialSection /><FacilitySection /><ConductedEventsSection /><CampusSection /><FAQSection /><AdmissionsCTA onEnquire={() => setEnquiryOpen(true)} /><ContactSection /></main><Footer />
+  return <div ref={pageRef} className="site-shell min-h-screen bg-page"><Header onEnquire={() => { setEnquiryOpen(true); }} /><main><Hero onEnquire={() => setEnquiryOpen(true)} /><StorySection /><FounderSection /><PrincipalSection /><ProgramsSection /><LittleNestSection onEnquire={() => setEnquiryOpen(true)} /><WhySection /><ActivitiesSection /><GallerySection onOpen={() => {}} /><EventsSection /><TestimonialSection /><FacilitySection /><ConductedEventsSection /><CampusSection /><FAQSection /><AdmissionsCTA onEnquire={() => setEnquiryOpen(true)} /><ContactSection /></main><Footer />
     <a href="#contact" className="fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 rounded-full bg-[#E8231A] px-5 py-3.5 text-sm font-bold text-white shadow-[0_10px_25px_rgba(232,35,26,.35)] transition-transform hover:-translate-y-1 sm:hidden" data-testid="link-mobile-floating-enquire"><MessageCircle className="size-4" /> Enquire now</a>
     {enquiryOpen && <div className="fixed inset-0 z-50 grid place-items-center bg-primary/50 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="enquiry-title" onMouseDown={(event) => { if (event.target === event.currentTarget) setEnquiryOpen(false); }}><div className="relative w-full max-w-md rounded-[28px] bg-page p-7 shadow-[0_30px_80px_rgba(32,48,71,.28)]"><button onClick={() => setEnquiryOpen(false)} className="absolute right-5 top-5 grid size-9 place-items-center rounded-full bg-section-mint/60 text-primary" aria-label="Close enquiry dialog" data-testid="button-enquiry-close"><X className="size-4" /></button><span className="grid size-11 place-items-center rounded-2xl bg-brand-gold text-primary"><Sparkles className="size-5" /></span><h2 id="enquiry-title" className="mt-5 font-display text-3xl text-primary">Let's plan a visit</h2><p className="mt-2 text-sm leading-6 text-tertiary">Share your details and the Kids Nest team will be in touch.</p><div className="mt-6 grid gap-3"><button className="mt-2 rounded-full bg-brand-coral px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-1" data-testid="button-enquiry-submit" onClick={() => window.location.href = 'mailto:kidsnestplayschool@outlook.com'}>Mail to Us <Mail className="ml-2 inline size-4" /></button><a href="https://wa.me/917358136930?text=Hi%20Kids%20Nest,%20I%20would%20like%20to%20know%20more%20about%20your%20programs." target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center justify-center rounded-full bg-[#25D366] px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-1" data-testid="button-enquiry-whatsapp">WhatsApp Chat <MessageCircle className="ml-2 size-4" /></a><a href="tel:04222314991" className="mt-2 flex items-center justify-center rounded-full bg-brand-teal px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-1" data-testid="button-enquiry-call">Call Now <Phone className="ml-2 size-4" /></a></div></div></div>}
   </div>;

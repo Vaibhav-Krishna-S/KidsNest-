@@ -337,13 +337,15 @@ function PrincipalSection() {
           </div>
 
           {/* Principal photo card */}
-          <div className="relative mx-auto w-full max-w-[420px] reveal delay-1">
+          <div className="relative mx-auto w-full max-w-[360px] reveal delay-1">
             <div className="absolute -right-4 -top-4 size-48 rounded-full bg-[var(--brand-teal)]/20 blur-2xl" />
             <div className="absolute -bottom-4 -left-4 size-48 rounded-full bg-[var(--brand-yellow)]/15 blur-2xl" />
             <div className="relative overflow-hidden rounded-[36px] border-4 border-card shadow-[0_24px_60px_rgba(32,48,71,.14)]">
-              <img src="/principal.png" alt="Mrs. Elizabeth Fernandez, Principal of Kidsnest School" className="w-full object-cover" />
-              <div className="bg-card p-6 text-center">
-                <h3 className="font-display text-2xl text-primary">Mrs. Elizabeth Fernandez</h3>
+              <div className="h-[460px] w-full overflow-hidden">
+                <img src="/principal.png" alt="Mrs. Elizabeth Fernandez, Principal of Kidsnest School" className="h-full w-full object-cover object-top" />
+              </div>
+              <div className="bg-card p-5 text-center">
+                <h3 className="font-display text-xl text-primary">Mrs. Elizabeth Fernandez</h3>
                 <p className="mt-1 text-sm font-bold text-brand-teal">Principal, Kidsnest School</p>
               </div>
             </div>

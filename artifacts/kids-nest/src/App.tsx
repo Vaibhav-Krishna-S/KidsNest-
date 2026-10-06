@@ -361,6 +361,7 @@ function PrincipalSection() {
 
 function WhySection() {
   const pillars = [
+  
     {
       icon: Heart,
       title: 'Low Child-to-Teacher Ratio',
@@ -388,7 +389,7 @@ function WhySection() {
     <section className="section-pad bg-page">
       <div className="container-wide">
         <SectionHeading eyebrow="The Kidsnest difference" title="Why parents choose Kidsnest" text="A considered beginning matters. We bring warmth, intention and a whole lot of joy to every part of the day." />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {pillars.map((pillar, index) => {
             const PillarIcon = pillar.icon;
             return (

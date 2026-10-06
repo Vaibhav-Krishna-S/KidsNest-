@@ -865,8 +865,8 @@ function FacilitySection() {
           {spaces.map(({ title, description, photo }, index) => (
             <div key={title} className="group relative overflow-hidden rounded-[22px]" data-testid={`facility-card-${index}`}>
               <div className="relative aspect-[4/3] overflow-hidden bg-[#3c2828]">
-                <img src={photo} alt={title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+                <img src={photo} alt={title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <h3 className="font-display text-xl text-white">{title}</h3>
                   <p className="mt-1 text-sm leading-5 text-white/85">{description}</p>

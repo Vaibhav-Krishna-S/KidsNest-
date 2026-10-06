@@ -362,13 +362,6 @@ function PrincipalSection() {
 function WhySection() {
   const pillars = [
     {
-      icon: Users,
-      title: 'Small Class Sizes',
-      description: 'We maintain small class sizes to ensure every child receives individual attention, care, and guidance.',
-      color: 'bg-card-playgroup',
-      iconColor: 'text-brand-teal',
-    },
-    {
       icon: Heart,
       title: 'Low Child-to-Teacher Ratio',
       description: 'Our low child-to-teacher ratio helps us understand each child\'s unique learning style and support their emotional, social, and academic growth effectively.',
